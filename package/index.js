@@ -1,4 +1,7 @@
-export { pattern as playroomTestPattern } from './dist'
+const { pattern: playroomTestPattern } = require('./dist')
+const playroomTestSnapshot = require('./snapshot')
 
-import snapshot from './snapshot'
-export default snapshot
+module.exports = {
+    playroomTestPattern,
+    playroomTestSnapshot,
+}
