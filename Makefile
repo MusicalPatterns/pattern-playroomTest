@@ -11,6 +11,9 @@ pull:
 push:
 	set -e; ../../node_modules/@musical-patterns/cli/bin/push.sh
 
+ship:
+	set -e; pushd ../..; make ship PATTERN="playroomTest"; popd
+
 .PHONY: test
 test:
 	set -e; pushd ../..; make test JASMINE_CONFIG_PATH="src/playroomTest/test/jasmine.js" PATTERN_NAME="PLAYROOM_TEST"; popd
