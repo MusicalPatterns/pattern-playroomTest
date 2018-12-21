@@ -1,7 +1,7 @@
-const { pattern: playroomTestPattern } = require('./dist')
-const playroomTestSnapshot = require('./snapshot')
+const { pattern } = require('./dist')
+const snapshot = require('./snapshot')
 
 module.exports = {
-    playroomTestPattern,
-    playroomTestSnapshot,
+    pattern,
+    snapshot,
 }
