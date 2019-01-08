@@ -2,14 +2,19 @@ import { Entity, PatternMaterial, Scale } from '@musical-patterns/compiler'
 import { PatternMetadata, PatternSpec } from '@musical-patterns/pattern'
 import { buildPatterns, Pattern, PatternId, Patterns } from '@musical-patterns/registry'
 import {
-    PLAYROOM_TEST_DURATION,
     PLAYROOM_TEST_PATTERN_DURATION_SCALAR,
     PLAYROOM_TEST_PATTERN_PITCH_SCALAR,
+    PLAYROOM_TEST_SCALAR,
 } from './constants'
 
 const material: PatternMaterial = {
     buildEntitiesFunction: (): Entity[] => [
-        { noteSpecs: [ { durationSpec: { scalar: PLAYROOM_TEST_DURATION } } ] },
+        {
+            noteSpecs: [ {
+                durationSpec: { scalar: PLAYROOM_TEST_SCALAR },
+                pitchSpec: { scalar: PLAYROOM_TEST_SCALAR },
+            } ],
+        },
     ],
     buildScalesFunction: (): Scale[] => [],
 }
