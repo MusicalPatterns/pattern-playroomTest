@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "notes": [
+      {
+        "duration": 10,
+        "gain": 1,
+        "frequency": 1,
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "sustain": 9
+      }
+    ]
+  }
+]
