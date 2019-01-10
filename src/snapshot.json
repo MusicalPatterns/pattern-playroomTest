@@ -2,15 +2,15 @@
   {
     "notes": [
       {
-        "duration": 2000,
+        "duration": 1000,
         "gain": 1,
-        "frequency": 2000,
+        "frequency": 2093,
         "position": [
           0,
           0,
           0
         ],
-        "sustain": 1800
+        "sustain": 900
       }
     ]
   }
