@@ -2,7 +2,7 @@
   {
     "notes": [
       {
-        "duration": 1000,
+        "duration": 6000,
         "gain": 1,
         "frequency": 2093,
         "position": [
@@ -10,7 +10,7 @@
           0,
           0
         ],
-        "sustain": 900
+        "sustain": 5400
       }
     ]
   }
