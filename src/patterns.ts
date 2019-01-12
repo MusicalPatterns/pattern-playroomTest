@@ -16,7 +16,9 @@ const material: PatternMaterial = {
 const metadata: PatternMetadata = {
     description: post,
     formattedName: 'Playroom Test',
+    mostRecentPublish: process.env.PUBLISH_DATE,
     musicalIdeaIllustrated: 'testing 1, 2, 3...',
+    originalPublish: '2018-12-19T07:00:00.000Z',
 }
 
 const spec: PatternSpec = {
