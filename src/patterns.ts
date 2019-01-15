@@ -26,7 +26,6 @@ const metadata: PatternMetadata = {
 }
 
 const spec: PlayroomTestPatternSpec = {
-    ...standardPatternSpec,
     exampleOptions: {
         initial: ExampleOptions.OPTION_TWO,
         patternSpecPropertyRange: Object.values(ExampleOptions),

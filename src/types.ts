@@ -1,11 +1,11 @@
-import { DiscretePatternSpecProperty, StandardPatternSpec } from '@musical-patterns/pattern'
+import { DiscretePatternSpecProperty, PatternSpec } from '@musical-patterns/pattern'
 
 enum ExampleOptions {
     OPTION_ONE = 'OPTION_ONE',
     OPTION_TWO = 'OPTION_TWO',
 }
 
-interface PlayroomTestPatternSpec extends StandardPatternSpec {
+interface PlayroomTestPatternSpec extends PatternSpec {
     exampleOptions: DiscretePatternSpecProperty,
 }
 
