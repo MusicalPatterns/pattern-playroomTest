@@ -3,6 +3,7 @@ import {
     PatternSpec,
     PatternSpecAttributes,
     RangedPatternSpecPropertyAttributes,
+    StandardPatternSpecProperties,
 } from '@musical-patterns/pattern'
 
 enum OptionedPropertyOneOptions {
@@ -16,10 +17,10 @@ enum OptionedPropertyTwoOptions {
 }
 
 interface PlayroomTestPatternSpecAttributes extends PatternSpecAttributes {
+    [ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ]: RangedPatternSpecPropertyAttributes,
+    [ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ]: RangedPatternSpecPropertyAttributes,
     optionedPropertyOne: OptionedPatternSpecPropertyAttributes,
     optionedPropertyTwo: OptionedPatternSpecPropertyAttributes,
-    patternDurationScalar: RangedPatternSpecPropertyAttributes,
-    patternPitchScalar: RangedPatternSpecPropertyAttributes,
 }
 
 interface PlayroomTestPatternSpec extends PatternSpec {
