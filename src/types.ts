@@ -1,24 +1,35 @@
-import { ContinuousPatternSpecProperty, DiscretePatternSpecProperty, PatternSpec } from '@musical-patterns/pattern'
+import {
+    OptionedPatternSpecPropertyAttributes,
+    PatternSpec,
+    PatternSpecAttributes,
+    RangedPatternSpecPropertyAttributes,
+} from '@musical-patterns/pattern'
 
-enum DiscretePropertyOneOptions {
+enum OptionedPropertyOneOptions {
     OPTION_ONE = 'OPTION_ONE',
     OPTION_TWO = 'OPTION_TWO',
 }
 
-enum DiscretePropertyTwoOptions {
+enum OptionedPropertyTwoOptions {
     OPTION_THE_FIRST = 'OPTION_THE_FIRST',
     OPTION_THE_SECOND = 'OPTION_THE_SECOND',
 }
 
+interface PlayroomTestPatternSpecAttributes extends PatternSpecAttributes {
+    optionedPropertyOne: OptionedPatternSpecPropertyAttributes,
+    optionedPropertyTwo: OptionedPatternSpecPropertyAttributes,
+    patternDurationScalar: RangedPatternSpecPropertyAttributes,
+    patternPitchScalar: RangedPatternSpecPropertyAttributes,
+}
+
 interface PlayroomTestPatternSpec extends PatternSpec {
-    discretePropertyOne: DiscretePatternSpecProperty,
-    discretePropertyTwo: DiscretePatternSpecProperty,
-    patternDurationScalar: ContinuousPatternSpecProperty,
-    patternPitchScalar: ContinuousPatternSpecProperty,
+    optionedPropertyOne: OptionedPropertyOneOptions,
+    optionedPropertyTwo: OptionedPropertyTwoOptions,
 }
 
 export {
     PlayroomTestPatternSpec,
-    DiscretePropertyOneOptions,
-    DiscretePropertyTwoOptions,
+    PlayroomTestPatternSpecAttributes,
+    OptionedPropertyOneOptions,
+    OptionedPropertyTwoOptions,
 }

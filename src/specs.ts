@@ -1,58 +1,55 @@
 import { PatternSpecPropertyType } from '@musical-patterns/pattern'
-import { from } from '@musical-patterns/utilities'
+import { apply, from, to } from '@musical-patterns/utilities'
 import {
     PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR,
     PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR,
     PLAYROOM_TEST_PATTERN_DURATION_SCALAR,
     PLAYROOM_TEST_PATTERN_PITCH_SCALAR,
 } from './constants'
-import { DiscretePropertyOneOptions, DiscretePropertyTwoOptions, PlayroomTestPatternSpec } from './types'
+import {
+    OptionedPropertyOneOptions,
+    OptionedPropertyTwoOptions,
+    PlayroomTestPatternSpec,
+    PlayroomTestPatternSpecAttributes,
+} from './types'
 
-const spec: PlayroomTestPatternSpec = {
-    discretePropertyOne: {
-        initial: DiscretePropertyOneOptions.OPTION_TWO,
-        patternSpecPropertyRange: Object.values(DiscretePropertyOneOptions),
-        patternSpecPropertyType: PatternSpecPropertyType.DISCRETE,
+const specAttributes: PlayroomTestPatternSpecAttributes = {
+    optionedPropertyOne: {
+        constraint: Object.values(OptionedPropertyOneOptions),
+        patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
     },
-    discretePropertyTwo: {
-        initial: DiscretePropertyTwoOptions.OPTION_THE_FIRST,
-        patternSpecPropertyRange: Object.values(DiscretePropertyTwoOptions),
-        patternSpecPropertyType: PatternSpecPropertyType.DISCRETE,
+    optionedPropertyTwo: {
+        constraint: Object.values(OptionedPropertyTwoOptions),
+        patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
     },
     patternDurationScalar: {
-        initial: from.Scalar(PLAYROOM_TEST_PATTERN_DURATION_SCALAR),
-        patternSpecPropertyRange: {
+        constraint: {
             max: from.Scalar(PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR),
             min: from.Scalar(PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR),
         },
-        patternSpecPropertyType: PatternSpecPropertyType.CONTINUOUS,
+        patternSpecPropertyType: PatternSpecPropertyType.RANGED,
     },
     patternPitchScalar: {
-        initial: from.Scalar(PLAYROOM_TEST_PATTERN_PITCH_SCALAR),
-        patternSpecPropertyType: PatternSpecPropertyType.CONTINUOUS,
+        patternSpecPropertyType: PatternSpecPropertyType.RANGED,
     },
 }
 
-const otherSpec: PlayroomTestPatternSpec = {
-    discretePropertyOne: {
-        ...spec.discretePropertyOne,
-        initial: DiscretePropertyOneOptions.OPTION_ONE,
-    },
-    discretePropertyTwo: {
-        ...spec.discretePropertyTwo,
-        initial: DiscretePropertyTwoOptions.OPTION_THE_SECOND,
-    },
-    patternDurationScalar: {
-        ...spec.patternDurationScalar,
-        initial: from.Scalar(PLAYROOM_TEST_PATTERN_DURATION_SCALAR) + 1,
-    },
-    patternPitchScalar: {
-        ...spec.patternPitchScalar,
-        initial: from.Scalar(PLAYROOM_TEST_PATTERN_PITCH_SCALAR) + 1,
-    },
+const initialSpec: PlayroomTestPatternSpec = {
+    optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
+    optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
+    patternDurationScalar: PLAYROOM_TEST_PATTERN_DURATION_SCALAR,
+    patternPitchScalar: PLAYROOM_TEST_PATTERN_PITCH_SCALAR,
+}
+
+const otherInitialSpec: PlayroomTestPatternSpec = {
+    optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
+    optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
+    patternDurationScalar: apply.Offset(PLAYROOM_TEST_PATTERN_DURATION_SCALAR, to.Offset(1)),
+    patternPitchScalar: apply.Offset(PLAYROOM_TEST_PATTERN_PITCH_SCALAR, to.Offset(1)),
 }
 
 export {
-    spec,
-    otherSpec,
+    initialSpec,
+    otherInitialSpec,
+    specAttributes,
 }

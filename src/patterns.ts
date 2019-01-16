@@ -3,7 +3,7 @@ import { PatternMetadata } from '@musical-patterns/pattern'
 import { buildPatterns, Pattern, PatternId, Patterns } from '@musical-patterns/registry'
 import { buildEntities } from './materials'
 import { otherPost, post } from './metadata'
-import { otherSpec, spec } from './specs'
+import { initialSpec, otherInitialSpec, specAttributes } from './specs'
 
 const material: PatternMaterial = {
     buildEntitiesFunction: buildEntities,
@@ -27,17 +27,19 @@ const otherMetadata: PatternMetadata = {
 }
 
 const pattern: Pattern = {
+    initialSpec,
     material,
     metadata,
     patternId: PatternId.PLAYROOM_TEST,
-    spec,
+    specAttributes,
 }
 
 const otherPattern: Pattern = {
+    initialSpec: otherInitialSpec,
     material,
     metadata: otherMetadata,
     patternId: PatternId.OTHER_PLAYROOM_TEST,
-    spec: otherSpec,
+    specAttributes,
 }
 
 const patterns: Patterns = buildPatterns({
@@ -49,5 +51,4 @@ export {
     pattern,
     otherPattern,
     patterns,
-    spec,
 }
