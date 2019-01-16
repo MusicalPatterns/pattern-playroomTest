@@ -1,4 +1,4 @@
-import { DiscretePatternSpecProperty, PatternSpec } from '@musical-patterns/pattern'
+import { ContinuousPatternSpecProperty, DiscretePatternSpecProperty, PatternSpec } from '@musical-patterns/pattern'
 
 enum DiscretePropertyOneOptions {
     OPTION_ONE = 'OPTION_ONE',
@@ -13,6 +13,8 @@ enum DiscretePropertyTwoOptions {
 interface PlayroomTestPatternSpec extends PatternSpec {
     discretePropertyOne: DiscretePatternSpecProperty,
     discretePropertyTwo: DiscretePatternSpecProperty,
+    patternDurationScalar: ContinuousPatternSpecProperty,
+    patternPitchScalar: ContinuousPatternSpecProperty,
 }
 
 export {

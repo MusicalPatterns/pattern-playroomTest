@@ -1,4 +1,4 @@
-import { ContinuousPatternSpecProperty, PatternSpecPropertyType } from '@musical-patterns/pattern'
+import { PatternSpecPropertyType } from '@musical-patterns/pattern'
 import { from } from '@musical-patterns/utilities'
 import {
     PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR,
@@ -42,16 +42,14 @@ const otherSpec: PlayroomTestPatternSpec = {
         ...spec.discretePropertyTwo,
         initial: DiscretePropertyTwoOptions.OPTION_THE_SECOND,
     },
-    // tslint:disable-next-line:no-object-literal-type-assertion
     patternDurationScalar: {
         ...spec.patternDurationScalar,
         initial: from.Scalar(PLAYROOM_TEST_PATTERN_DURATION_SCALAR) + 1,
-    } as ContinuousPatternSpecProperty,
-    // tslint:disable-next-line:no-object-literal-type-assertion
+    },
     patternPitchScalar: {
         ...spec.patternPitchScalar,
         initial: from.Scalar(PLAYROOM_TEST_PATTERN_PITCH_SCALAR) + 1,
-    } as ContinuousPatternSpecProperty,
+    },
 }
 
 export {
