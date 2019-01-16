@@ -1,5 +1,5 @@
 import { PatternMaterial, Scale } from '@musical-patterns/compiler'
-import { PatternMetadata, PatternSpecPropertyType, standardPatternSpec } from '@musical-patterns/pattern'
+import { ContinuousPatternSpecProperty, PatternMetadata, PatternSpecPropertyType } from '@musical-patterns/pattern'
 import { buildPatterns, Pattern, PatternId, Patterns } from '@musical-patterns/registry'
 import { from } from '@musical-patterns/utilities'
 import {
@@ -9,7 +9,7 @@ import {
     PLAYROOM_TEST_PATTERN_PITCH_SCALAR,
 } from './constants'
 import { buildEntities } from './materials'
-import { post } from './metadata'
+import { otherPost, post } from './metadata'
 import { ExampleOptions, PlayroomTestPatternSpec } from './types'
 
 const material: PatternMaterial = {
@@ -23,6 +23,14 @@ const metadata: PatternMetadata = {
     mostRecentPublish: process.env.PUBLISH_DATE || '2018-12-19T07:00:00.000Z',
     musicalIdeaIllustrated: 'testing 1, 2, 3...',
     originalPublish: '2018-12-19T07:00:00.000Z',
+}
+
+const otherMetadata: PatternMetadata = {
+    description: otherPost,
+    formattedName: 'Other Playroom Test',
+    mostRecentPublish: process.env.PUBLISH_DATE || '2018-12-19T07:00:00.000Z',
+    musicalIdeaIllustrated: 'testing A, B, C...',
+    originalPublish: '2019-01-15T07:00:00.000Z',
 }
 
 const spec: PlayroomTestPatternSpec = {
@@ -45,6 +53,23 @@ const spec: PlayroomTestPatternSpec = {
     },
 }
 
+const otherSpec: PlayroomTestPatternSpec = {
+    exampleOptions: {
+        ...spec.exampleOptions,
+        initial: ExampleOptions.OPTION_ONE,
+    },
+    // tslint:disable-next-line:no-object-literal-type-assertion
+    patternDurationScalar: {
+        ...spec.patternDurationScalar,
+        initial: from.Scalar(PLAYROOM_TEST_PATTERN_DURATION_SCALAR) + 1,
+    } as ContinuousPatternSpecProperty,
+    // tslint:disable-next-line:no-object-literal-type-assertion
+    patternPitchScalar: {
+        ...spec.patternPitchScalar,
+        initial: from.Scalar(PLAYROOM_TEST_PATTERN_PITCH_SCALAR) + 1,
+    } as ContinuousPatternSpecProperty,
+}
+
 const pattern: Pattern = {
     material,
     metadata,
@@ -52,12 +77,21 @@ const pattern: Pattern = {
     spec,
 }
 
+const otherPattern: Pattern = {
+    material,
+    metadata: otherMetadata,
+    patternId: PatternId.OTHER_PLAYROOM_TEST,
+    spec: otherSpec,
+}
+
 const patterns: Patterns = buildPatterns({
     [ pattern.patternId ]: pattern,
+    [ otherPattern.patternId ]: otherPattern,
 })
 
 export {
     pattern,
+    otherPattern,
     patterns,
     spec,
 }
