@@ -27,9 +27,11 @@ const specAttributes: PlayroomTestPatternSpecAttributes = {
             max: from.Scalar(PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR),
             min: from.Scalar(PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR),
         },
+        formattedName: 'ranged property one',
         patternSpecPropertyType: PatternSpecPropertyType.RANGED,
     },
     patternPitchScalar: {
+        formattedName: 'ranged property two',
         patternSpecPropertyType: PatternSpecPropertyType.RANGED,
     },
 }
