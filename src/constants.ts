@@ -4,8 +4,8 @@ import { Scalar, to } from '@musical-patterns/utilities'
 
 const PLAYROOM_TEST_PATTERN_DURATION_SCALAR: Scalar = to.Scalar(100)
 const PLAYROOM_TEST_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(4186)
-const PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(150)
-const PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(50)
+const PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(1002)
+const PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(10)
 
 export {
     PLAYROOM_TEST_PATTERN_DURATION_SCALAR,
