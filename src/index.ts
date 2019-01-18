@@ -1,4 +1,4 @@
-export { otherPattern, pattern } from './patterns'
+export { patterns } from './patterns'
 
 // tslint:disable-next-line:no-default-import
 import snapshot from './snapshot.json'

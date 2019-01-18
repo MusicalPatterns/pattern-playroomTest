@@ -1,10 +1,11 @@
 import { BuildEntitiesFunction, Entity } from '@musical-patterns/compiler'
-import { PatternSpec, StandardPatternSpecProperties } from '@musical-patterns/pattern'
+import { StandardPatternSpecProperties } from '@musical-patterns/pattern'
 import { apply, HALF } from '@musical-patterns/utilities'
+import { PlayroomTestPatternSpec } from '../types'
 import { PLAYROOM_TEST_SCALAR } from './constants'
 
 const buildEntities: BuildEntitiesFunction =
-    (patternSpec: PatternSpec): Entity[] => [
+    (patternSpec: PlayroomTestPatternSpec): Entity[] => [
         {
             noteSpecs: [ {
                 durationSpec: {

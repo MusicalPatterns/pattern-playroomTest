@@ -1,8 +1,8 @@
 import {
     OptionedPatternSpecPropertyAttributes,
-    PatternSpec,
-    PatternSpecAttributes,
     RangedPatternSpecPropertyAttributes,
+    StandardPatternSpec,
+    StandardPatternSpecAttributes,
     StandardPatternSpecProperties,
 } from '@musical-patterns/pattern'
 
@@ -16,14 +16,14 @@ enum OptionedPropertyTwoOptions {
     OPTION_THE_SECOND = 'OPTION_THE_SECOND',
 }
 
-interface PlayroomTestPatternSpecAttributes extends PatternSpecAttributes {
+interface PlayroomTestPatternSpecAttributes extends StandardPatternSpecAttributes {
     [ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ]: RangedPatternSpecPropertyAttributes,
     [ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ]: RangedPatternSpecPropertyAttributes,
     optionedPropertyOne: OptionedPatternSpecPropertyAttributes,
     optionedPropertyTwo: OptionedPatternSpecPropertyAttributes,
 }
 
-interface PlayroomTestPatternSpec extends PatternSpec {
+interface PlayroomTestPatternSpec extends StandardPatternSpec {
     optionedPropertyOne: OptionedPropertyOneOptions,
     optionedPropertyTwo: OptionedPropertyTwoOptions,
 }
