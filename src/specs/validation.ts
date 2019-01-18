@@ -11,11 +11,6 @@ const validationFunction: PatternSpecValidationFunction<PlayroomTestPatternSpec>
         const pitch: Scalar = patternSpec[ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ] || to.Scalar(1)
         const duration: Scalar = patternSpec[ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ] || to.Scalar(1)
 
-        // tslint:disable
-        console.log('pitch', pitch)
-        console.log('duration', duration)
-        console.log('test - if this is true, i should give failure messages', pitch < duration)
-
         if (pitch < duration) {
             return {
                 [ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ]: 'pitch must be more than duration, obvs',
