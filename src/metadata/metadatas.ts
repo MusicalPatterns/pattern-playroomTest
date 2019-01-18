@@ -1,5 +1,5 @@
 import { PatternMetadata } from '@musical-patterns/pattern'
-import { nonPost, post } from './index'
+import { nonPost, post } from './posts'
 
 const baseMetadata: PatternMetadata = {
     description: nonPost,
@@ -48,7 +48,7 @@ const playroomTestValidationMetadata: PatternMetadata = {
 
 const playroomTestPresetsMetadata: PatternMetadata = {
     ...baseMetadata,
-    musicalIdeaIllustrated: 'validation',
+    musicalIdeaIllustrated: 'presets',
     originalPublish: '2019-01-18T07:00:00.000Z',
 }
 
