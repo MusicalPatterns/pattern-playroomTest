@@ -7,44 +7,34 @@ import { validationFunction } from './validation'
 
 const specData: PatternSpecData<PlayroomTestPatternSpec> = {
     attributes,
-    specs: {
-        initial,
-    },
+    initial,
 }
 
 const differentSpecData: PatternSpecData<PlayroomTestPatternSpec> = {
     attributes,
-    specs: {
-        initial: differentInitial,
-    },
+    initial: differentInitial,
 }
 
 const specDataOnlyStandardInitial: PatternSpecData<StandardPatternSpec> = {
     attributes,
-    specs: {
-        initial: onlyStandardInitial,
-    },
+    initial: onlyStandardInitial,
 }
 
 const specDataOnlyPatternSpecificInitial: PatternSpecData<PlayroomTestPatternSpec> = {
     attributes,
-    specs: {
-        initial: onlyPatternSpecificInitial,
-    },
+    initial: onlyPatternSpecificInitial,
 }
 
 const specDataValidation: PatternSpecData<PlayroomTestPatternSpec> = {
     attributes,
-    specs: {
-        initial,
-    },
+    initial,
     validationFunction,
 }
 
 const specDataPresets: PatternSpecData<PlayroomTestPatternSpec> = {
     attributes,
-    specs: {
-        initial,
+    initial,
+    presets: {
         presetOne,
         presetTwo,
     },
