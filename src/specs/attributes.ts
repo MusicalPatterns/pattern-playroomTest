@@ -3,7 +3,7 @@ import { from } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR, PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR } from '../constants'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestPatternSpecAttributes } from '../types'
 
-const specAttributes: PlayroomTestPatternSpecAttributes = {
+const attributes: PlayroomTestPatternSpecAttributes = {
     optionedPropertyOne: {
         constraint: Object.values(OptionedPropertyOneOptions),
         patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
@@ -27,5 +27,5 @@ const specAttributes: PlayroomTestPatternSpecAttributes = {
 }
 
 export {
-    specAttributes,
+    attributes,
 }

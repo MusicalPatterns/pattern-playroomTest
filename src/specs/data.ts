@@ -1,40 +1,40 @@
 import { PatternSpecData, StandardPatternSpec } from '@musical-patterns/pattern'
 import { PlayroomTestPatternSpec } from '../types'
-import { specAttributes } from './attributes'
+import { attributes } from './attributes'
 import { differentInitial, initial, onlyPatternSpecificInitial, onlyStandardInitial } from './initial'
 import { presetOne, presetTwo } from './presets'
 import { validationFunction } from './validation'
 
 const specData: PatternSpecData<PlayroomTestPatternSpec> = {
-    specAttributes,
+    attributes,
     specs: {
         initial,
     },
 }
 
 const differentSpecData: PatternSpecData<PlayroomTestPatternSpec> = {
-    specAttributes,
+    attributes,
     specs: {
         initial: differentInitial,
     },
 }
 
 const specDataOnlyStandardInitial: PatternSpecData<StandardPatternSpec> = {
-    specAttributes,
+    attributes,
     specs: {
         initial: onlyStandardInitial,
     },
 }
 
 const specDataOnlyPatternSpecificInitial: PatternSpecData<PlayroomTestPatternSpec> = {
-    specAttributes,
+    attributes,
     specs: {
         initial: onlyPatternSpecificInitial,
     },
 }
 
 const specDataValidation: PatternSpecData<PlayroomTestPatternSpec> = {
-    specAttributes,
+    attributes,
     specs: {
         initial,
     },
@@ -42,7 +42,7 @@ const specDataValidation: PatternSpecData<PlayroomTestPatternSpec> = {
 }
 
 const specDataPresets: PatternSpecData<PlayroomTestPatternSpec> = {
-    specAttributes,
+    attributes,
     specs: {
         initial,
         presetOne,
