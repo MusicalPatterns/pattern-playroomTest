@@ -6,6 +6,7 @@ import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestPat
 const onlyPatternSpecificInitial: PlayroomTestPatternSpec = {
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
+    toggledProperty: true,
 }
 
 const onlyStandardInitial: StandardPatternSpec = {
@@ -21,6 +22,7 @@ const initial: PlayroomTestPatternSpec = {
 const differentInitial: PlayroomTestPatternSpec = {
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
+    toggledProperty: false,
     [ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ]:
         apply.Offset(PLAYROOM_TEST_PATTERN_DURATION_SCALAR, to.Offset(1)),
     [ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ]:

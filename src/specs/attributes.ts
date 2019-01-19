@@ -15,6 +15,7 @@ const attributes: PlayroomTestPatternSpecAttributes = {
                 key: OptionedPropertyOneOptions.OPTION_TWO,
             },
         ],
+        formattedName: 'example optioned property one',
         patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
     },
     optionedPropertyTwo: {
@@ -28,18 +29,23 @@ const attributes: PlayroomTestPatternSpecAttributes = {
                 key: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
             },
         ],
+        formattedName: 'example optioned property two',
         patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
+    },
+    toggledProperty: {
+        formattedName: 'example on/off property',
+        patternSpecPropertyType: PatternSpecPropertyType.TOGGLED,
     },
     [ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ]: {
         constraint: {
             max: from.Scalar(PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR),
             min: from.Scalar(PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR),
         },
-        formattedName: 'ranged property one',
+        formattedName: 'example ranged property one',
         patternSpecPropertyType: PatternSpecPropertyType.RANGED,
     },
     [ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ]: {
-        formattedName: 'ranged property two',
+        formattedName: 'example ranged property two',
         patternSpecPropertyType: PatternSpecPropertyType.RANGED,
     },
 }
