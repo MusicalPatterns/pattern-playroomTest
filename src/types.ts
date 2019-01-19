@@ -7,13 +7,13 @@ import {
 } from '@musical-patterns/pattern'
 
 enum OptionedPropertyOneOptions {
-    OPTION_ONE = 'OPTION_ONE',
-    OPTION_TWO = 'OPTION_TWO',
+    OPTION_ONE = 'Option one',
+    OPTION_TWO = 'Option two',
 }
 
 enum OptionedPropertyTwoOptions {
-    OPTION_THE_FIRST = 'OPTION_THE_FIRST',
-    OPTION_THE_SECOND = 'OPTION_THE_SECOND',
+    OPTION_THE_FIRST = 'Option the First',
+    OPTION_THE_SECOND = 'Option the Second',
 }
 
 interface PlayroomTestPatternSpecAttributes extends StandardPatternSpecAttributes {

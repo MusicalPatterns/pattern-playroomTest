@@ -1,15 +1,19 @@
-import { PatternSpecPropertyType, StandardPatternSpecProperties } from '@musical-patterns/pattern'
+import {
+    buildOptionedConstraint,
+    PatternSpecPropertyType,
+    StandardPatternSpecProperties,
+} from '@musical-patterns/pattern'
 import { from } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR, PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR } from '../constants'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestPatternSpecAttributes } from '../types'
 
 const attributes: PlayroomTestPatternSpecAttributes = {
     optionedPropertyOne: {
-        constraint: Object.values(OptionedPropertyOneOptions),
+        constraint: buildOptionedConstraint(OptionedPropertyOneOptions),
         patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
     },
     optionedPropertyTwo: {
-        constraint: Object.values(OptionedPropertyTwoOptions),
+        constraint: buildOptionedConstraint(OptionedPropertyTwoOptions),
         patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
     },
     [ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ]: {
