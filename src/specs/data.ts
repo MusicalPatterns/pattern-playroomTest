@@ -33,7 +33,7 @@ const specDataValidation: PatternSpecData<PlayroomTestPatternSpec> = {
 
 const specDataPresets: PatternSpecData<PlayroomTestPatternSpec> = {
     attributes,
-    initial,
+    initial: onlyPatternSpecificInitial,
     presets: {
         presetOne,
         presetTwo,
