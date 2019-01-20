@@ -2,7 +2,7 @@ export {
     specData,
     differentSpecData,
     specDataOnlyStandardInitial,
-    specDataOnlyPatternSpecificInitial,
+    specDataOnlyPatternParticularInitial,
     specDataValidation,
     specDataPresets,
 } from './data'

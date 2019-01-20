@@ -1,8 +1,8 @@
 export {
-    playroomTestPatternSpecControlsMetadata,
+    playroomTestSpecControlsMetadata,
     playroomTestPostMetadata,
     playroomTestTimeControlsMetadata,
-    playroomTestOnlyPatternSpecificSpecMetadata,
+    playroomTestOnlyPatternParticularSpecMetadata,
     playroomTestOnlyStandardSpecMetadata,
     playroomTestValidationMetadata,
     playroomTestPresetsMetadata,

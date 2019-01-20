@@ -1,12 +1,12 @@
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestPatternSpec } from '../types'
+import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from '../types'
 
-const presetOne: PlayroomTestPatternSpec = {
+const presetOne: PlayroomTestSpec = {
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
     toggledProperty: false,
 }
 
-const presetTwo: PlayroomTestPatternSpec = {
+const presetTwo: PlayroomTestSpec = {
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
     toggledProperty: true,

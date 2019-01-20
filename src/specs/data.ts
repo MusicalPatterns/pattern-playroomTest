@@ -1,39 +1,39 @@
-import { PatternSpecDataFor, StandardPatternSpec } from '@musical-patterns/pattern'
-import { PlayroomTestPatternSpec } from '../types'
+import { SpecDataFor, StandardSpec } from '@musical-patterns/pattern'
+import { PlayroomTestSpec } from '../types'
 import { attributes } from './attributes'
-import { differentInitial, initial, onlyPatternSpecificInitial, onlyStandardInitial } from './initial'
+import { differentInitial, initial, onlyPatternParticularInitial, onlyStandardInitial } from './initial'
 import { presetOne, presetTwo } from './presets'
 import { validationFunction } from './validation'
 
-const specData: PatternSpecDataFor<PlayroomTestPatternSpec> = {
+const specData: SpecDataFor<PlayroomTestSpec> = {
     attributes,
     initial,
 }
 
-const differentSpecData: PatternSpecDataFor<PlayroomTestPatternSpec> = {
+const differentSpecData: SpecDataFor<PlayroomTestSpec> = {
     attributes,
     initial: differentInitial,
 }
 
-const specDataOnlyStandardInitial: PatternSpecDataFor<StandardPatternSpec> = {
+const specDataOnlyStandardInitial: SpecDataFor<StandardSpec> = {
     attributes,
     initial: onlyStandardInitial,
 }
 
-const specDataOnlyPatternSpecificInitial: PatternSpecDataFor<PlayroomTestPatternSpec> = {
+const specDataOnlyPatternParticularInitial: SpecDataFor<PlayroomTestSpec> = {
     attributes,
-    initial: onlyPatternSpecificInitial,
+    initial: onlyPatternParticularInitial,
 }
 
-const specDataValidation: PatternSpecDataFor<PlayroomTestPatternSpec> = {
+const specDataValidation: SpecDataFor<PlayroomTestSpec> = {
     attributes,
     initial,
     validationFunction,
 }
 
-const specDataPresets: PatternSpecDataFor<PlayroomTestPatternSpec> = {
+const specDataPresets: SpecDataFor<PlayroomTestSpec> = {
     attributes,
-    initial: onlyPatternSpecificInitial,
+    initial: onlyPatternParticularInitial,
     presets: {
         presetOne,
         presetTwo,
@@ -44,7 +44,7 @@ export {
     specData,
     differentSpecData,
     specDataOnlyStandardInitial,
-    specDataOnlyPatternSpecificInitial,
+    specDataOnlyPatternParticularInitial,
     specDataValidation,
     specDataPresets,
 }

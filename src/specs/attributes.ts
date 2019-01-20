@@ -1,9 +1,9 @@
-import { PatternSpecPropertyType, StandardPatternSpecProperties } from '@musical-patterns/pattern'
+import { SpecPropertyType, StandardSpecProperties } from '@musical-patterns/pattern'
 import { from } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR, PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR } from '../constants'
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestPatternSpecAttributes } from '../types'
+import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpecAttributes } from '../types'
 
-const attributes: PlayroomTestPatternSpecAttributes = {
+const attributes: PlayroomTestSpecAttributes = {
     optionedPropertyOne: {
         constraint: [
             {
@@ -16,7 +16,7 @@ const attributes: PlayroomTestPatternSpecAttributes = {
             },
         ],
         formattedName: 'example optioned property one',
-        patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
+        specPropertyType: SpecPropertyType.OPTIONED,
     },
     optionedPropertyTwo: {
         constraint: [
@@ -30,23 +30,23 @@ const attributes: PlayroomTestPatternSpecAttributes = {
             },
         ],
         formattedName: 'example optioned property two',
-        patternSpecPropertyType: PatternSpecPropertyType.OPTIONED,
+        specPropertyType: SpecPropertyType.OPTIONED,
     },
     toggledProperty: {
         formattedName: 'example on/off property',
-        patternSpecPropertyType: PatternSpecPropertyType.TOGGLED,
+        specPropertyType: SpecPropertyType.TOGGLED,
     },
-    [ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ]: {
+    [ StandardSpecProperties.PATTERN_DURATION_SCALAR ]: {
         constraint: {
             max: from.Scalar(PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR),
             min: from.Scalar(PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR),
         },
         formattedName: 'example ranged property one',
-        patternSpecPropertyType: PatternSpecPropertyType.RANGED,
+        specPropertyType: SpecPropertyType.RANGED,
     },
-    [ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ]: {
+    [ StandardSpecProperties.PATTERN_PITCH_SCALAR ]: {
         formattedName: 'example ranged property two',
-        patternSpecPropertyType: PatternSpecPropertyType.RANGED,
+        specPropertyType: SpecPropertyType.RANGED,
     },
 }
 

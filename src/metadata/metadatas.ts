@@ -9,9 +9,9 @@ const baseMetadata: PatternMetadata = {
     originalPublish: '',
 }
 
-const playroomTestPatternSpecControlsMetadata: PatternMetadata = {
+const playroomTestSpecControlsMetadata: PatternMetadata = {
     ...baseMetadata,
-    musicalIdeaIllustrated: 'pattern spec controls',
+    musicalIdeaIllustrated: 'spec controls',
     originalPublish: '2018-12-19T07:00:00.000Z',
 }
 
@@ -28,9 +28,9 @@ const playroomTestTimeControlsMetadata: PatternMetadata = {
     originalPublish: '2019-01-18T07:00:00.000Z',
 }
 
-const playroomTestOnlyPatternSpecificSpecMetadata: PatternMetadata = {
+const playroomTestOnlyPatternParticularSpecMetadata: PatternMetadata = {
     ...baseMetadata,
-    musicalIdeaIllustrated: 'only pattern-specific spec',
+    musicalIdeaIllustrated: 'only pattern-particular spec',
     originalPublish: '2019-01-18T07:00:00.000Z',
 }
 
@@ -53,10 +53,10 @@ const playroomTestPresetsMetadata: PatternMetadata = {
 }
 
 export {
-    playroomTestPatternSpecControlsMetadata,
+    playroomTestSpecControlsMetadata,
     playroomTestPostMetadata,
     playroomTestTimeControlsMetadata,
-    playroomTestOnlyPatternSpecificSpecMetadata,
+    playroomTestOnlyPatternParticularSpecMetadata,
     playroomTestOnlyStandardSpecMetadata,
     playroomTestValidationMetadata,
     playroomTestPresetsMetadata,
