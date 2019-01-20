@@ -1,6 +1,6 @@
 import { Material, Scale } from '@musical-patterns/compiler'
 import { StandardSpec } from '@musical-patterns/pattern'
-import { buildPatterns, PatternFor, PatternId, Patterns } from '@musical-patterns/registry'
+import { buildPatterns, Id, PatternFor, Patterns } from '@musical-patterns/registry'
 import { buildEntities } from './materials'
 import {
     playroomTestOnlyPatternParticularSpecMetadata,
@@ -27,62 +27,62 @@ const material: Material = {
 }
 
 const playroomTestSpecControls: PatternFor<PlayroomTestSpec> = {
+    id: Id.PLAYROOM_TEST_SPEC_CONTROLS,
     material,
     metadata: playroomTestSpecControlsMetadata,
-    patternId: PatternId.PLAYROOM_TEST_SPEC_CONTROLS,
     specData,
 }
 
 const playroomTestPost: PatternFor<PlayroomTestSpec> = {
+    id: Id.PLAYROOM_TEST_POST,
     material,
     metadata: playroomTestPostMetadata,
-    patternId: PatternId.PLAYROOM_TEST_POST,
     specData: differentSpecData,
 }
 
 const playroomTestTimeControls: PatternFor<PlayroomTestSpec> = {
+    id: Id.PLAYROOM_TEST_TIME_CONTROLS,
     material,
     metadata: playroomTestTimeControlsMetadata,
-    patternId: PatternId.PLAYROOM_TEST_TIME_CONTROLS,
     specData: differentSpecData,
 }
 
 const playroomTestOnlyPatternParticularSpec: PatternFor<PlayroomTestSpec> = {
+    id: Id.PLAYROOM_TEST_ONLY_PATTERN_PARTICULAR_SPEC,
     material,
     metadata: playroomTestOnlyPatternParticularSpecMetadata,
-    patternId: PatternId.PLAYROOM_TEST_ONLY_PATTERN_PARTICULAR_SPEC,
     specData: specDataOnlyPatternParticularInitial,
 }
 
 const playroomTestOnlyStandardSpec: PatternFor<StandardSpec> = {
+    id: Id.PLAYROOM_TEST_ONLY_STANDARD_SPEC,
     material,
     metadata: playroomTestOnlyStandardSpecMetadata,
-    patternId: PatternId.PLAYROOM_TEST_ONLY_STANDARD_SPEC,
     specData: specDataOnlyStandardInitial,
 }
 
 const playroomTestValidation: PatternFor<PlayroomTestSpec> = {
+    id: Id.PLAYROOM_TEST_VALIDATION,
     material,
     metadata: playroomTestValidationMetadata,
-    patternId: PatternId.PLAYROOM_TEST_VALIDATION,
     specData: specDataValidation,
 }
 
 const playroomTestPresets: PatternFor<PlayroomTestSpec> = {
+    id: Id.PLAYROOM_TEST_PRESETS,
     material,
     metadata: playroomTestPresetsMetadata,
-    patternId: PatternId.PLAYROOM_TEST_PRESETS,
     specData: specDataPresets,
 }
 
 const patterns: Patterns = buildPatterns({
-    [ playroomTestSpecControls.patternId ]: playroomTestSpecControls,
-    [ playroomTestPost.patternId ]: playroomTestPost,
-    [ playroomTestTimeControls.patternId ]: playroomTestTimeControls,
-    [ playroomTestOnlyPatternParticularSpec.patternId ]: playroomTestOnlyPatternParticularSpec,
-    [ playroomTestOnlyStandardSpec.patternId ]: playroomTestOnlyStandardSpec,
-    [ playroomTestValidation.patternId ]: playroomTestValidation,
-    [ playroomTestPresets.patternId ]: playroomTestPresets,
+    [ playroomTestSpecControls.id ]: playroomTestSpecControls,
+    [ playroomTestPost.id ]: playroomTestPost,
+    [ playroomTestTimeControls.id ]: playroomTestTimeControls,
+    [ playroomTestOnlyPatternParticularSpec.id ]: playroomTestOnlyPatternParticularSpec,
+    [ playroomTestOnlyStandardSpec.id ]: playroomTestOnlyStandardSpec,
+    [ playroomTestValidation.id ]: playroomTestValidation,
+    [ playroomTestPresets.id ]: playroomTestPresets,
 })
 
 const pattern: PatternFor<PlayroomTestSpec> = playroomTestSpecControls
