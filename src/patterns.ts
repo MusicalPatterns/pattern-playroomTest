@@ -1,6 +1,5 @@
 import { Material, Scale } from '@musical-patterns/compiler'
-import { StandardSpec } from '@musical-patterns/pattern'
-import { buildPatterns, Id, PatternFor, Patterns } from '@musical-patterns/registry'
+import { buildPatterns, Id, PatternFor, Patterns, StandardSpec } from '@musical-patterns/pattern'
 import { buildEntities } from './materials'
 import {
     playroomTestOnlyPatternParticularSpecMetadata,
