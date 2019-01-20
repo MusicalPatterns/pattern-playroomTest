@@ -1,4 +1,4 @@
-import { PatternMaterial, Scale } from '@musical-patterns/compiler'
+import { Material, Scale } from '@musical-patterns/compiler'
 import { StandardSpec } from '@musical-patterns/pattern'
 import { buildPatterns, PatternFor, PatternId, Patterns } from '@musical-patterns/registry'
 import { buildEntities } from './materials'
@@ -21,7 +21,7 @@ import {
 } from './specs'
 import { PlayroomTestSpec } from './types'
 
-const material: PatternMaterial = {
+const material: Material = {
     buildEntitiesFunction: buildEntities,
     buildScalesFunction: (): Scale[] => [],
 }
