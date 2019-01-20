@@ -1,13 +1,13 @@
 import {
-    PatternSpecValidationFunction,
-    PatternSpecValidationResults,
+    PatternSpecValidationFunctionFor,
+    PatternSpecValidationResultsFor,
     StandardPatternSpecProperties,
 } from '@musical-patterns/pattern'
 import { Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestPatternSpec } from '../types'
 
-const validationFunction: PatternSpecValidationFunction<PlayroomTestPatternSpec> =
-    (patternSpec: PlayroomTestPatternSpec): PatternSpecValidationResults<PlayroomTestPatternSpec> => {
+const validationFunction: PatternSpecValidationFunctionFor<PlayroomTestPatternSpec> =
+    (patternSpec: PlayroomTestPatternSpec): PatternSpecValidationResultsFor<PlayroomTestPatternSpec> => {
         const pitch: Scalar = patternSpec[ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ] || to.Scalar(1)
         const duration: Scalar = patternSpec[ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ] || to.Scalar(1)
 
