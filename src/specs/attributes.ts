@@ -1,9 +1,10 @@
-import { SpecPropertyType, StandardSpecProperties } from '@musical-patterns/pattern'
+import { SpecPropertyType, standardSpecAttributes, StandardSpecProperties } from '@musical-patterns/pattern'
 import { from } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR, PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR } from '../constants'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpecAttributes } from '../types'
 
 const attributes: PlayroomTestSpecAttributes = {
+    ...standardSpecAttributes,
     optionedPropertyOne: {
         constraint: [
             {
