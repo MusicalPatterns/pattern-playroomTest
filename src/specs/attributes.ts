@@ -1,6 +1,6 @@
 import { SpecPropertyType, standardSpecAttributes, StandardSpecProperties } from '@musical-patterns/pattern'
 import { from } from '@musical-patterns/utilities'
-import { PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR, PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR } from '../constants'
+import { PLAYROOM_TEST_MAX_BASE_DURATION, PLAYROOM_TEST_MIN_BASE_DURATION } from '../constants'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpecAttributes } from '../types'
 
 const attributes: PlayroomTestSpecAttributes = {
@@ -37,15 +37,15 @@ const attributes: PlayroomTestSpecAttributes = {
         formattedName: 'example on/off property',
         specPropertyType: SpecPropertyType.TOGGLED,
     },
-    [ StandardSpecProperties.PATTERN_DURATION_SCALAR ]: {
+    [ StandardSpecProperties.BASE_DURATION ]: {
         constraint: {
-            max: from.Scalar(PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR),
-            min: from.Scalar(PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR),
+            max: from.Millisecond(PLAYROOM_TEST_MAX_BASE_DURATION),
+            min: from.Millisecond(PLAYROOM_TEST_MIN_BASE_DURATION),
         },
         formattedName: 'example ranged property one',
         specPropertyType: SpecPropertyType.RANGED,
     },
-    [ StandardSpecProperties.PATTERN_PITCH_SCALAR ]: {
+    [ StandardSpecProperties.BASE_FREQUENCY ]: {
         formattedName: 'example ranged property two',
         specPropertyType: SpecPropertyType.RANGED,
     },

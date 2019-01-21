@@ -1,15 +1,15 @@
 // tslint:disable:no-magic-numbers
 
-import { Scalar, to } from '@musical-patterns/utilities'
+import { Frequency, Millisecond, Scalar, to } from '@musical-patterns/utilities'
 
-const PLAYROOM_TEST_PATTERN_DURATION_SCALAR: Scalar = to.Scalar(100)
-const PLAYROOM_TEST_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(4186)
-const PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(1002)
-const PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR: Scalar = to.Scalar(10)
+const PLAYROOM_TEST_BASE_DURATION: Millisecond = to.Millisecond(100)
+const PLAYROOM_TEST_BASE_FREQUENCY: Frequency = to.Frequency(4186)
+const PLAYROOM_TEST_MAX_BASE_DURATION: Millisecond = to.Millisecond(1002)
+const PLAYROOM_TEST_MIN_BASE_DURATION: Millisecond = to.Millisecond(10)
 
 export {
-    PLAYROOM_TEST_PATTERN_DURATION_SCALAR,
-    PLAYROOM_TEST_PATTERN_PITCH_SCALAR,
-    PLAYROOM_TEST_MAX_PATTERN_PITCH_SCALAR,
-    PLAYROOM_TEST_MIN_PATTERN_PITCH_SCALAR,
+    PLAYROOM_TEST_BASE_DURATION,
+    PLAYROOM_TEST_BASE_FREQUENCY,
+    PLAYROOM_TEST_MAX_BASE_DURATION,
+    PLAYROOM_TEST_MIN_BASE_DURATION,
 }

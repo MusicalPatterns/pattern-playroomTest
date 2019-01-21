@@ -17,8 +17,8 @@ enum OptionedPropertyTwoOptions {
 }
 
 interface PlayroomTestSpecAttributes extends StandardSpecAttributes {
-    [ StandardSpecProperties.PATTERN_DURATION_SCALAR ]: RangedSpecPropertyAttributes,
-    [ StandardSpecProperties.PATTERN_PITCH_SCALAR ]: RangedSpecPropertyAttributes,
+    [ StandardSpecProperties.BASE_DURATION ]: RangedSpecPropertyAttributes,
+    [ StandardSpecProperties.BASE_FREQUENCY ]: RangedSpecPropertyAttributes,
     optionedPropertyOne: OptionedSpecPropertyAttributes,
     optionedPropertyTwo: OptionedSpecPropertyAttributes,
     toggledProperty: ToggledSpecPropertyAttributes,

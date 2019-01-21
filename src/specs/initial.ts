@@ -1,6 +1,6 @@
 import { StandardSpec, StandardSpecProperties } from '@musical-patterns/pattern'
 import { apply, to } from '@musical-patterns/utilities'
-import { PLAYROOM_TEST_PATTERN_DURATION_SCALAR, PLAYROOM_TEST_PATTERN_PITCH_SCALAR } from '../constants'
+import { PLAYROOM_TEST_BASE_DURATION, PLAYROOM_TEST_BASE_FREQUENCY } from '../constants'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from '../types'
 
 const onlyPatternParticularInitial: PlayroomTestSpec = {
@@ -10,8 +10,8 @@ const onlyPatternParticularInitial: PlayroomTestSpec = {
 }
 
 const onlyStandardInitial: StandardSpec = {
-    [ StandardSpecProperties.PATTERN_DURATION_SCALAR ]: PLAYROOM_TEST_PATTERN_DURATION_SCALAR,
-    [ StandardSpecProperties.PATTERN_PITCH_SCALAR ]: PLAYROOM_TEST_PATTERN_PITCH_SCALAR,
+    [ StandardSpecProperties.BASE_DURATION ]: PLAYROOM_TEST_BASE_DURATION,
+    [ StandardSpecProperties.BASE_FREQUENCY ]: PLAYROOM_TEST_BASE_FREQUENCY,
 }
 
 const initial: PlayroomTestSpec = {
@@ -23,10 +23,10 @@ const differentInitial: PlayroomTestSpec = {
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
     toggledProperty: false,
-    [ StandardSpecProperties.PATTERN_DURATION_SCALAR ]:
-        apply.Offset(PLAYROOM_TEST_PATTERN_DURATION_SCALAR, to.Offset(1)),
-    [ StandardSpecProperties.PATTERN_PITCH_SCALAR ]:
-        apply.Offset(PLAYROOM_TEST_PATTERN_PITCH_SCALAR, to.Offset(1)),
+    [ StandardSpecProperties.BASE_DURATION ]:
+        apply.Offset(PLAYROOM_TEST_BASE_DURATION, to.Offset(1)),
+    [ StandardSpecProperties.BASE_FREQUENCY ]:
+        apply.Offset(PLAYROOM_TEST_BASE_FREQUENCY, to.Offset(1)),
 }
 
 export {
