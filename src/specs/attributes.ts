@@ -5,6 +5,13 @@ import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpe
 
 const attributes: PlayroomTestSpecAttributes = {
     ...standardSpecAttributes,
+    arrayOfRangedProperty: {
+        constraint: {
+            min: 0,
+        },
+        formattedName: 'example array of ranged property',
+        specPropertyType: SpecPropertyType.RANGED,
+    },
     optionedPropertyOne: {
         constraint: [
             {
