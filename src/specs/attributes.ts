@@ -10,6 +10,7 @@ const attributes: PlayroomTestSpecAttributes = {
             min: 0,
         },
         formattedName: 'example array of ranged property',
+        isArray: true,
         specPropertyType: SpecPropertyType.RANGED,
     },
     optionedPropertyOne: {
