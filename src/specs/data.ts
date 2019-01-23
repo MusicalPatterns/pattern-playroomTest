@@ -20,7 +20,7 @@ const differentSpecData: SpecDataFor<PlayroomTestSpec> = {
         ...attributes,
         [ StandardSpecProperties.BASE_FREQUENCY ]: {
             ...attributes[ StandardSpecProperties.BASE_FREQUENCY ],
-            hideInput: RangedInputType.RANGE,
+            hideInput: RangedInputType.NUMBER,
         },
     },
     initial: differentInitial,
