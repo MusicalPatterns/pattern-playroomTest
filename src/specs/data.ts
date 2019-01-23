@@ -7,7 +7,7 @@ import {
 import { PlayroomTestSpec } from '../types'
 import { attributes } from './attributes'
 import { differentInitial, initial, onlyPatternParticularInitial, onlyStandardInitial } from './initial'
-import { presetOne, presetTwo } from './presets'
+import { presets } from './presets'
 import { validationFunction } from './validation'
 
 const specData: SpecDataFor<PlayroomTestSpec> = {
@@ -45,10 +45,7 @@ const specDataValidation: SpecDataFor<PlayroomTestSpec> = {
 const specDataPresets: SpecDataFor<PlayroomTestSpec> = {
     attributes,
     initial: onlyPatternParticularInitial,
-    presets: {
-        presetOne,
-        presetTwo,
-    },
+    presets,
 }
 
 export {

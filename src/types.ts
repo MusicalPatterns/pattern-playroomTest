@@ -10,6 +10,7 @@ import {
 enum OptionedPropertyOneOptions {
     OPTION_ONE = 'OPTION_ONE',
     OPTION_TWO = 'OPTION_TWO',
+    OPTION_THREE = 'OPTION_THREE',
 }
 
 enum OptionedPropertyTwoOptions {

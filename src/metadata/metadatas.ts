@@ -2,8 +2,6 @@ import { Metadata } from '@musical-patterns/pattern'
 import { nonPost, post } from './posts'
 
 const baseMetadata: Metadata = {
-    description: nonPost,
-    formattedName: 'Playroom Test',
     mostRecentPublish: process.env.PUBLISH_DATE || '2018-12-19T07:00:00.000Z',
     musicalIdeaIllustrated: '',
     originalPublish: '',
@@ -11,6 +9,8 @@ const baseMetadata: Metadata = {
 
 const playroomTestSpecControlsMetadata: Metadata = {
     ...baseMetadata,
+    description: nonPost,
+    formattedName: 'Playroom Test',
     musicalIdeaIllustrated: 'spec controls',
     originalPublish: '2018-12-19T07:00:00.000Z',
 }
@@ -19,6 +19,7 @@ const playroomTestPostMetadata: Metadata = {
     ...baseMetadata,
     description: post,
     musicalIdeaIllustrated: 'post',
+    order: 1,
     originalPublish: '2019-01-15T07:00:00.000Z',
 }
 
@@ -43,12 +44,14 @@ const playroomTestOnlyStandardSpecMetadata: Metadata = {
 const playroomTestValidationMetadata: Metadata = {
     ...baseMetadata,
     musicalIdeaIllustrated: 'validation',
+    order: 3,
     originalPublish: '2019-01-18T07:00:00.000Z',
 }
 
 const playroomTestPresetsMetadata: Metadata = {
     ...baseMetadata,
     musicalIdeaIllustrated: 'presets',
+    order: 7,
     originalPublish: '2019-01-18T07:00:00.000Z',
 }
 

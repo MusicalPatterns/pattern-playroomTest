@@ -27,6 +27,12 @@ const attributes: PlayroomTestSpecAttributes = {
             {
                 formattedName: 'Option two',
                 key: OptionedPropertyOneOptions.OPTION_TWO,
+                order: 1,
+            },
+            {
+                formattedName: 'Option three',
+                key: OptionedPropertyOneOptions.OPTION_THREE,
+                order: 2,
             },
         ],
         formattedName: 'example optioned property one',
@@ -39,7 +45,7 @@ const attributes: PlayroomTestSpecAttributes = {
                 key: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
             },
             {
-                formattedName: 'Option the Second',
+                description: 'Option the Second has no formatted name, but it sure does have a description!',
                 key: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
             },
         ],
@@ -48,6 +54,7 @@ const attributes: PlayroomTestSpecAttributes = {
     },
     toggledProperty: {
         formattedName: 'example on/off property',
+        order: 1,
         specPropertyType: SpecPropertyType.TOGGLED,
     },
     [ StandardSpecProperties.BASE_DURATION ]: {
@@ -57,12 +64,14 @@ const attributes: PlayroomTestSpecAttributes = {
             min: from.Millisecond(PLAYROOM_TEST_MIN_BASE_DURATION),
         },
         formattedName: 'example ranged property one',
+        order: 2,
     },
     [ StandardSpecProperties.BASE_FREQUENCY ]: {
         ...standardSpecAttributes[ StandardSpecProperties.BASE_DURATION ],
         description: 'I need to describe something to you and it is super cereal you guys',
         formattedName: 'example ranged property two',
         hideInput: RangedInputType.RANGE,
+        order: 3,
     },
 }
 
