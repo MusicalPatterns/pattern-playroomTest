@@ -60,6 +60,7 @@ const attributes: PlayroomTestSpecAttributes = {
     },
     [ StandardSpecProperties.BASE_FREQUENCY ]: {
         ...standardSpecAttributes[ StandardSpecProperties.BASE_DURATION ],
+        description: 'I need to describe something to you and it is super cereal you guys',
         formattedName: 'example ranged property two',
         hideInput: RangedInputType.RANGE,
     },
