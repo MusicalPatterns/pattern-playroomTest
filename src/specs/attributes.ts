@@ -51,17 +51,17 @@ const attributes: PlayroomTestSpecAttributes = {
         specPropertyType: SpecPropertyType.TOGGLED,
     },
     [ StandardSpecProperties.BASE_DURATION ]: {
+        ...standardSpecAttributes[ StandardSpecProperties.BASE_DURATION ],
         constraint: {
             max: from.Millisecond(PLAYROOM_TEST_MAX_BASE_DURATION),
             min: from.Millisecond(PLAYROOM_TEST_MIN_BASE_DURATION),
         },
         formattedName: 'example ranged property one',
-        specPropertyType: SpecPropertyType.RANGED,
     },
     [ StandardSpecProperties.BASE_FREQUENCY ]: {
+        ...standardSpecAttributes[ StandardSpecProperties.BASE_DURATION ],
         formattedName: 'example ranged property two',
         hideInput: RangedInputType.RANGE,
-        specPropertyType: SpecPropertyType.RANGED,
     },
 }
 
