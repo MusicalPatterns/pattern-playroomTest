@@ -1,4 +1,4 @@
-import { Preset } from '@musical-patterns/pattern'
+import { PresetFor } from '@musical-patterns/pattern'
 import { DictionaryOf } from '@musical-patterns/utilities'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from '../types'
 import { INITIAL_ARRAY_OF_RANGED_PROPERTY } from './constants'
@@ -17,19 +17,19 @@ const otherPresetSpec: PlayroomTestSpec = {
     toggledProperty: true,
 }
 
-const presetOne: Preset<PlayroomTestSpec> = {
+const presetOne: PresetFor<PlayroomTestSpec> = {
     formattedName: 'Preset Uno',
     order: 4,
     spec: presetSpec,
 }
 
-const presetTwo: Preset<PlayroomTestSpec> = {
+const presetTwo: PresetFor<PlayroomTestSpec> = {
     formattedName: 'Preset Dos',
     order: 7,
     spec: otherPresetSpec,
 }
 
-const presetThree: Preset<PlayroomTestSpec> = {
+const presetThree: PresetFor<PlayroomTestSpec> = {
     description: 'this preset exists to QA preset presentation',
     spec: {
         ...presetSpec,
@@ -37,7 +37,7 @@ const presetThree: Preset<PlayroomTestSpec> = {
     },
 }
 
-const presets: DictionaryOf<Preset<PlayroomTestSpec>> = {
+const presets: DictionaryOf<PresetFor<PlayroomTestSpec>> = {
     presetOne,
     presetThree,
     presetTwo,
