@@ -1,6 +1,6 @@
 import { Material, Scale } from '@musical-patterns/compiler'
 import { buildPatterns, Id, PatternFor, Patterns, StandardSpec } from '@musical-patterns/pattern'
-import { buildEntities } from './materials'
+import { buildEntities } from './material'
 import {
     playroomTestOnlyPatternParticularSpecMetadata,
     playroomTestOnlyStandardSpecMetadata,
@@ -17,7 +17,7 @@ import {
     specDataOnlyStandardInitial,
     specDataPresets,
     specDataValidation,
-} from './specs'
+} from './spec'
 import { PlayroomTestSpec } from './types'
 
 const material: Material = {
