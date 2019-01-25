@@ -1,5 +1,5 @@
 import { Material, Scale } from '@musical-patterns/compiler'
-import { buildPatterns, Id, PatternFor, Patterns, StandardSpec } from '@musical-patterns/pattern'
+import { Id, PatternFor, Patterns, StandardSpec } from '@musical-patterns/pattern'
 import { buildEntities } from './material'
 import {
     playroomTestOnlyPatternParticularSpecMetadata,
@@ -74,7 +74,7 @@ const playroomTestPresets: PatternFor<PlayroomTestSpec> = {
     specData: specDataPresets,
 }
 
-const patterns: Patterns = buildPatterns({
+const patterns: Patterns = {
     [ playroomTestSpecControls.id ]: playroomTestSpecControls,
     [ playroomTestPost.id ]: playroomTestPost,
     [ playroomTestTimeControls.id ]: playroomTestTimeControls,
@@ -82,7 +82,7 @@ const patterns: Patterns = buildPatterns({
     [ playroomTestOnlyStandardSpec.id ]: playroomTestOnlyStandardSpec,
     [ playroomTestValidation.id ]: playroomTestValidation,
     [ playroomTestPresets.id ]: playroomTestPresets,
-})
+}
 
 const pattern: PatternFor<PlayroomTestSpec> = playroomTestSpecControls
 
