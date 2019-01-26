@@ -1,8 +1,8 @@
 import {
     OptionedSpecPropertyAttributes,
     RangedSpecPropertyAttributes,
-    StandardSpec,
-    StandardSpecAttributes,
+    Spec,
+    SpecAttributes,
     StandardSpecProperties,
     ToggledSpecPropertyAttributes,
 } from '@musical-patterns/pattern'
@@ -18,7 +18,7 @@ enum OptionedPropertyTwoOptions {
     OPTION_THE_SECOND = 'OPTION_THE_SECOND',
 }
 
-interface PlayroomTestSpecAttributes extends StandardSpecAttributes {
+interface PlayroomTestSpecAttributes extends SpecAttributes {
     [ StandardSpecProperties.BASE_DURATION ]: RangedSpecPropertyAttributes,
     [ StandardSpecProperties.BASE_FREQUENCY ]: RangedSpecPropertyAttributes,
     arrayOfRangedProperty: RangedSpecPropertyAttributes,
@@ -27,7 +27,7 @@ interface PlayroomTestSpecAttributes extends StandardSpecAttributes {
     toggledProperty: ToggledSpecPropertyAttributes,
 }
 
-interface PlayroomTestSpec extends StandardSpec {
+interface PlayroomTestSpec extends Spec {
     arrayOfRangedProperty: number[],
     optionedPropertyOne: OptionedPropertyOneOptions,
     optionedPropertyTwo: OptionedPropertyTwoOptions,
