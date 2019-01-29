@@ -3,17 +3,17 @@ import {
     SpecValidationResultsFor,
     StandardSpecProperties,
 } from '@musical-patterns/pattern'
-import { Frequency, from, isEven, Millisecond, to } from '@musical-patterns/utilities'
+import { Frequency, from, isEven, Milliseconds, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpec } from '../types'
 
 const validationFunction: SpecValidationFunctionFor<PlayroomTestSpec> =
     (spec: PlayroomTestSpec): SpecValidationResultsFor<PlayroomTestSpec> => {
         const pitch: Frequency = spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Frequency(1)
-        const duration: Millisecond = spec[ StandardSpecProperties.BASE_DURATION ] || to.Millisecond(1)
+        const duration: Milliseconds = spec[ StandardSpecProperties.BASE_DURATION ] || to.Milliseconds(1)
 
         const arrayOfRangedProperty: number[] = spec.arrayOfRangedProperty
 
-        if (from.Frequency(pitch) < from.Millisecond(duration)) {
+        if (from.Frequency(pitch) < from.Milliseconds(duration)) {
             return {
                 [ StandardSpecProperties.BASE_FREQUENCY ]: 'pitch must be more than duration, obvs',
                 [ StandardSpecProperties.BASE_DURATION ]: 'duration must be less than pitch, obvs',

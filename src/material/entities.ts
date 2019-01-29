@@ -10,7 +10,9 @@ const buildEntities: BuildEntitiesFunction =
             noteSpecs: [ {
                 durationSpec: {
                     scalar: apply.Scalar(
-                        to.Scalar(from.Millisecond(spec[ StandardSpecProperties.BASE_DURATION ] || to.Millisecond(1))),
+                        to.Scalar(
+                            from.Milliseconds(spec[ StandardSpecProperties.BASE_DURATION ] || to.Milliseconds(1)),
+                        ),
                         PLAYROOM_TEST_SCALAR,
                     ),
                 },
