@@ -32,27 +32,27 @@ const playroomTestTimeControlsMetadata: Metadata = {
 const playroomTestOnlyPatternParticularSpecMetadata: Metadata = {
     ...baseMetadata,
     musicalIdeaIllustrated: 'only pattern-particular spec',
-    originalPublish: '2019-01-18T07:00:00.000Z',
+    originalPublish: '2019-01-18T08:00:00.000Z',
 }
 
 const playroomTestOnlyStandardSpecMetadata: Metadata = {
     ...baseMetadata,
     musicalIdeaIllustrated: 'only standard spec',
-    originalPublish: '2019-01-18T07:00:00.000Z',
+    originalPublish: '2019-01-18T09:00:00.000Z',
 }
 
 const playroomTestValidationMetadata: Metadata = {
     ...baseMetadata,
     musicalIdeaIllustrated: 'validation',
     order: 3,
-    originalPublish: '2019-01-18T07:00:00.000Z',
+    originalPublish: '2019-01-18T10:00:00.000Z',
 }
 
 const playroomTestPresetsMetadata: Metadata = {
     ...baseMetadata,
     musicalIdeaIllustrated: 'presets',
     order: 7,
-    originalPublish: '2019-01-18T07:00:00.000Z',
+    originalPublish: '2019-01-18T11:00:00.000Z',
 }
 
 export {
