@@ -10,7 +10,6 @@ const baseMetadata: Metadata = {
 const playroomTestSpecControlsMetadata: Metadata = {
     ...baseMetadata,
     description: nonPost,
-    formattedName: 'Playroom Test',
     musicalIdeaIllustrated: 'spec controls',
     originalPublish: '2018-12-19T07:00:00.000Z',
 }
@@ -18,6 +17,7 @@ const playroomTestSpecControlsMetadata: Metadata = {
 const playroomTestPostMetadata: Metadata = {
     ...baseMetadata,
     description: post,
+    formattedName: 'Playroom Test',
     musicalIdeaIllustrated: 'post',
     order: 1,
     originalPublish: '2019-01-15T07:00:00.000Z',
