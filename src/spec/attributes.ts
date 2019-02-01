@@ -60,6 +60,8 @@ const attributes: PlayroomTestSpecAttributes = {
     [ StandardSpecProperties.BASE_DURATION ]: {
         ...standardSpecAttributes[ StandardSpecProperties.BASE_DURATION ],
         constraint: {
+            excludeMax: true,
+            excludeMin: true,
             max: from.Milliseconds(PLAYROOM_TEST_MAX_BASE_DURATION),
             min: from.Milliseconds(PLAYROOM_TEST_MIN_BASE_DURATION),
         },
