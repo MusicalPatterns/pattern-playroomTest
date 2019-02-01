@@ -10,12 +10,12 @@ import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpe
 
 const attributes: PlayroomTestSpecAttributes = {
     ...standardSpecAttributes,
-    arrayOfRangedProperty: {
+    arrayedProperty: {
         constraint: {
             min: 0,
         },
         formattedName: 'example array of ranged property',
-        isArray: true,
+        isArrayed: true,
         specPropertyType: SpecPropertyType.RANGED,
     },
     optionedPropertyOne: {

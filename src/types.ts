@@ -21,14 +21,14 @@ enum OptionedPropertyTwoOptions {
 interface PlayroomTestSpecAttributes extends SpecAttributes {
     [ StandardSpecProperties.BASE_DURATION ]: RangedSpecPropertyAttributes,
     [ StandardSpecProperties.BASE_FREQUENCY ]: RangedSpecPropertyAttributes,
-    arrayOfRangedProperty: RangedSpecPropertyAttributes,
+    arrayedProperty: RangedSpecPropertyAttributes,
     optionedPropertyOne: OptionedSpecPropertyAttributes,
     optionedPropertyTwo: OptionedSpecPropertyAttributes,
     toggledProperty: ToggledSpecPropertyAttributes,
 }
 
 interface PlayroomTestSpec extends Spec {
-    arrayOfRangedProperty: number[],
+    arrayedProperty: number[],
     optionedPropertyOne: OptionedPropertyOneOptions,
     optionedPropertyTwo: OptionedPropertyTwoOptions,
     toggledProperty: boolean,

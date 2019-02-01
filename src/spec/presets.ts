@@ -1,17 +1,17 @@
 import { PresetFor } from '@musical-patterns/pattern'
 import { DictionaryOf } from '@musical-patterns/utilities'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from '../types'
-import { PLAYROOM_TEST_INITIAL_ARRAY_OF_RANGED_PROPERTY } from './constants'
+import { PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY } from './constants'
 
 const presetSpec: PlayroomTestSpec = {
-    arrayOfRangedProperty: PLAYROOM_TEST_INITIAL_ARRAY_OF_RANGED_PROPERTY,
+    arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
     toggledProperty: false,
 }
 
 const otherPresetSpec: PlayroomTestSpec = {
-    arrayOfRangedProperty: PLAYROOM_TEST_INITIAL_ARRAY_OF_RANGED_PROPERTY,
+    arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
     toggledProperty: true,

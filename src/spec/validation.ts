@@ -11,7 +11,7 @@ const validationFunction: SpecValidationFunctionFor<PlayroomTestSpec> =
         const pitch: Frequency = spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Frequency(1)
         const duration: Milliseconds = spec[ StandardSpecProperties.BASE_DURATION ] || to.Milliseconds(1)
 
-        const arrayOfRangedProperty: number[] = spec.arrayOfRangedProperty
+        const arrayedProperty: number[] = spec.arrayedProperty
 
         if (from.Frequency(pitch) < from.Milliseconds(duration)) {
             return {
@@ -20,9 +20,9 @@ const validationFunction: SpecValidationFunctionFor<PlayroomTestSpec> =
             }
         }
 
-        if (isEven(arrayOfRangedProperty.length)) {
+        if (isEven(arrayedProperty.length)) {
             return {
-                arrayOfRangedProperty: 'arrays can only be odd in length, duoy',
+                arrayedProperty: 'arrays can only be odd in length, duoy',
             }
         }
 
