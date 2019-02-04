@@ -1,6 +1,6 @@
 import { BuildEntitiesFunction, Entity } from '@musical-patterns/compiler'
 import { StandardSpecProperties } from '@musical-patterns/pattern'
-import { apply, from, HALF, to } from '@musical-patterns/utilities'
+import { apply, from, ONE_HALF, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpec } from '../types'
 import { PLAYROOM_TEST_SCALAR } from './constants'
 
@@ -19,7 +19,7 @@ const buildEntities: BuildEntitiesFunction =
                 pitchSpec: {
                     scalar: apply.Scalar(
                         to.Scalar(from.Frequency(spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Frequency(1))),
-                        HALF,
+                        ONE_HALF,
                     ),
                 },
             } ],
