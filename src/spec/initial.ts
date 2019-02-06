@@ -27,9 +27,9 @@ const differentInitial: PlayroomTestSpec = {
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
     toggledProperty: false,
     [ StandardSpecProperties.BASE_DURATION ]:
-        apply.Offset(PLAYROOM_TEST_INITIAL_BASE_DURATION, to.Offset(1)),
+        apply.Translation(PLAYROOM_TEST_INITIAL_BASE_DURATION, to.Translation(1)),
     [ StandardSpecProperties.BASE_FREQUENCY ]:
-        apply.Offset(PLAYROOM_TEST_INITIAL_BASE_FREQUENCY, to.Offset(1)),
+        apply.Translation(PLAYROOM_TEST_INITIAL_BASE_FREQUENCY, to.Translation(1)),
 }
 
 export {
