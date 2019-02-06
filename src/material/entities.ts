@@ -9,18 +9,16 @@ const buildEntities: BuildEntitiesFunction =
         {
             noteSpecs: [ {
                 durationSpec: {
-                    scalar: apply.Scalar(
-                        to.Scalar(
-                            from.Milliseconds(spec[ StandardSpecProperties.BASE_DURATION ] || to.Milliseconds(1)),
-                        ),
+                    scalar: to.Scalar(from.Milliseconds(apply.Scalar(
+                        spec[ StandardSpecProperties.BASE_DURATION ] || to.Milliseconds(1),
                         PLAYROOM_TEST_SCALAR,
-                    ),
+                    ))),
                 },
                 pitchSpec: {
-                    scalar: apply.Scalar(
-                        to.Scalar(from.Frequency(spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Frequency(1))),
+                    scalar: to.Scalar(from.Frequency(apply.Scalar(
+                        spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Frequency(1),
                         ONE_HALF,
-                    ),
+                    ))),
                 },
             } ],
         },
