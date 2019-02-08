@@ -62,8 +62,8 @@ const attributes: PlayroomTestSpecAttributes = {
         constraint: {
             excludeMax: true,
             excludeMin: true,
-            max: from.Milliseconds(PLAYROOM_TEST_MAX_BASE_DURATION),
-            min: from.Milliseconds(PLAYROOM_TEST_MIN_BASE_DURATION),
+            max: from.Ms(PLAYROOM_TEST_MAX_BASE_DURATION),
+            min: from.Ms(PLAYROOM_TEST_MIN_BASE_DURATION),
         },
         formattedName: 'example ranged property one',
         order: 2,
