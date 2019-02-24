@@ -4,10 +4,10 @@ import {
     StandardSpec,
     StandardSpecProperties,
 } from '@musical-patterns/pattern'
-import { PlayroomTestSpec } from '../types'
 import { attributes } from './attributes'
 import { differentInitial, initial, onlyPatternParticularInitial, onlyStandardInitial } from './initial'
 import { presets } from './presets'
+import { PlayroomTestSpec } from './types'
 import { validationFunction } from './validation'
 
 const specData: SpecDataFor<PlayroomTestSpec> = {

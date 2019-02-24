@@ -4,7 +4,7 @@ import {
     StandardSpecProperties,
 } from '@musical-patterns/pattern'
 import { from, Hz, isEven, Ms, Scalar, to } from '@musical-patterns/utilities'
-import { PlayroomTestSpec } from '../types'
+import { PlayroomTestSpec } from './types'
 
 const validationFunction: SpecValidationFunctionFor<PlayroomTestSpec> =
     (spec: PlayroomTestSpec): SpecValidationResultsFor<PlayroomTestSpec> => {

@@ -12,13 +12,13 @@ import {
 } from './metadata'
 import {
     differentSpecData,
+    PlayroomTestSpec,
     specData,
     specDataOnlyPatternParticularInitial,
     specDataOnlyStandardInitial,
     specDataPresets,
     specDataValidation,
 } from './spec'
-import { PlayroomTestSpec } from './types'
 
 const material: Material = {
     buildEntitiesFunction: buildEntities,

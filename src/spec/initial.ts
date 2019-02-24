@@ -1,8 +1,8 @@
 import { StandardSpec, StandardSpecProperties } from '@musical-patterns/pattern'
 import { apply } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_INITIAL_BASE_DURATION, PLAYROOM_TEST_INITIAL_BASE_FREQUENCY } from '../constants'
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from '../types'
 import { DIFFERENT, PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY } from './constants'
+import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from './types'
 
 const onlyPatternParticularInitial: PlayroomTestSpec = {
     arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,

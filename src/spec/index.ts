@@ -6,3 +6,6 @@ export {
     specDataValidation,
     specDataPresets,
 } from './data'
+export {
+    PlayroomTestSpec,
+} from './types'

@@ -6,7 +6,7 @@ import {
 } from '@musical-patterns/pattern'
 import { from } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_BASE_DURATION, PLAYROOM_TEST_MIN_BASE_DURATION } from '../constants'
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpecAttributes } from '../types'
+import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpecAttributes } from './types'
 
 const attributes: PlayroomTestSpecAttributes = {
     ...standardSpecAttributes,

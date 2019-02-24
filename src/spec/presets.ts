@@ -1,7 +1,7 @@
 import { PresetFor } from '@musical-patterns/pattern'
 import { DictionaryOf } from '@musical-patterns/utilities'
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from '../types'
 import { PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY } from './constants'
+import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from './types'
 
 const presetSpec: PlayroomTestSpec = {
     arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
