@@ -1,6 +1,6 @@
 import {
     RangedInputType,
-    SpecDataFor,
+    SpecData,
     StandardSpec,
     StandardSpecProperties,
 } from '@musical-patterns/pattern'
@@ -10,12 +10,12 @@ import { presets } from './presets'
 import { PlayroomTestSpec } from './types'
 import { validationFunction } from './validation'
 
-const specData: SpecDataFor<PlayroomTestSpec> = {
+const specData: SpecData<PlayroomTestSpec> = {
     attributes,
     initial,
 }
 
-const differentSpecData: SpecDataFor<PlayroomTestSpec> = {
+const differentSpecData: SpecData<PlayroomTestSpec> = {
     attributes: {
         ...attributes,
         [ StandardSpecProperties.BASE_FREQUENCY ]: {
@@ -26,23 +26,23 @@ const differentSpecData: SpecDataFor<PlayroomTestSpec> = {
     initial: differentInitial,
 }
 
-const specDataOnlyStandardInitial: SpecDataFor<StandardSpec> = {
+const specDataOnlyStandardInitial: SpecData<StandardSpec> = {
     attributes,
     initial: onlyStandardInitial,
 }
 
-const specDataOnlyPatternParticularInitial: SpecDataFor<PlayroomTestSpec> = {
+const specDataOnlyPatternParticularInitial: SpecData<PlayroomTestSpec> = {
     attributes,
     initial: onlyPatternParticularInitial,
 }
 
-const specDataValidation: SpecDataFor<PlayroomTestSpec> = {
+const specDataValidation: SpecData<PlayroomTestSpec> = {
     attributes,
     initial,
     validationFunction,
 }
 
-const specDataPresets: SpecDataFor<PlayroomTestSpec> = {
+const specDataPresets: SpecData<PlayroomTestSpec> = {
     attributes,
     initial: onlyPatternParticularInitial,
     presets,

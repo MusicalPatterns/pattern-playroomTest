@@ -1,13 +1,13 @@
 import {
-    SpecValidationFunctionFor,
-    SpecValidationResultsFor,
+    SpecValidationFunction,
+    SpecValidationResults,
     StandardSpecProperties,
 } from '@musical-patterns/pattern'
 import { from, Hz, isEven, Ms, Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpec } from './types'
 
-const validationFunction: SpecValidationFunctionFor<PlayroomTestSpec> =
-    (spec: PlayroomTestSpec): SpecValidationResultsFor<PlayroomTestSpec> => {
+const validationFunction: SpecValidationFunction<PlayroomTestSpec> =
+    (spec: PlayroomTestSpec): SpecValidationResults<PlayroomTestSpec> => {
         const pitch: Scalar<Hz> = spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Scalar(to.Hz(1))
         const duration: Scalar<Ms> = spec[ StandardSpecProperties.BASE_DURATION ] || to.Scalar(to.Ms(1))
 

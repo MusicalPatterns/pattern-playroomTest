@@ -1,7 +1,7 @@
 import {
     OptionedSpecPropertyAttributes,
     RangedSpecPropertyAttributes,
-    SpecAttributesFor,
+    SpecAttributes,
     StandardSpec,
     StandardSpecProperties,
     ToggledSpecPropertyAttributes,
@@ -18,7 +18,7 @@ enum OptionedPropertyTwoOptions {
     OPTION_THE_SECOND = 'OPTION_THE_SECOND',
 }
 
-interface PlayroomTestSpecAttributes extends SpecAttributesFor<PlayroomTestSpec> {
+interface PlayroomTestSpecAttributes extends SpecAttributes<PlayroomTestSpec> {
     [ StandardSpecProperties.BASE_DURATION ]: RangedSpecPropertyAttributes,
     [ StandardSpecProperties.BASE_FREQUENCY ]: RangedSpecPropertyAttributes,
     arrayedProperty: RangedSpecPropertyAttributes,
