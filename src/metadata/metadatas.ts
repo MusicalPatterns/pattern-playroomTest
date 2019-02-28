@@ -5,6 +5,7 @@ const baseMetadata: Metadata = {
     mostRecentPublish: process.env.PUBLISH_DATE || '2018-12-19T07:00:00.000Z',
     musicalIdeaIllustrated: '',
     originalPublish: '',
+    version: process.env.PATTERN_VERSION || 'unknown',
 }
 
 const playroomTestSpecControlsMetadata: Metadata = {
