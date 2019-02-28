@@ -1,8 +1,4 @@
-import {
-    SpecValidationFunction,
-    SpecValidationResults,
-    StandardSpecProperties,
-} from '@musical-patterns/pattern'
+import { SpecValidationFunction, SpecValidationResults, StandardSpecProperties } from '@musical-patterns/pattern'
 import { from, Hz, isEven, Ms, Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpec } from './types'
 

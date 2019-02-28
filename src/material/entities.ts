@@ -11,7 +11,7 @@ const buildEntities: BuildEntitiesFunction =
             PLAYROOM_TEST_SCALAR,
         ))
 
-        const pitchScalar: Scalar =  from.Hz(apply.Scalar(
+        const pitchScalar: Scalar = from.Hz(apply.Scalar(
             spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Hz(to.Scalar(1)),
             ONE_HALF,
         ))

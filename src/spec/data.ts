@@ -1,9 +1,4 @@
-import {
-    RangedInputType,
-    SpecData,
-    StandardSpec,
-    StandardSpecProperties,
-} from '@musical-patterns/pattern'
+import { RangedInputType, SpecData, StandardSpec, StandardSpecProperties } from '@musical-patterns/pattern'
 import { attributes } from './attributes'
 import { differentInitial, initial, onlyPatternParticularInitial, onlyStandardInitial } from './initial'
 import { presets } from './presets'
