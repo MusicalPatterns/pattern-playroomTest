@@ -20,7 +20,7 @@ const attributes: PlayroomTestSpecAttributes = {
     },
     arrayedPropertyWithInitialElementValue: {
         arrayedNewElementInitialValue: 6,
-        formattedName: 'example array of ranged property',
+        formattedName: 'example array of ranged property, with an initial value for its elements',
         isArrayed: true,
         specPropertyType: SpecPropertyType.RANGED,
     },
