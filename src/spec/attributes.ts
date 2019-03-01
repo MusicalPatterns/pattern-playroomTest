@@ -18,6 +18,12 @@ const attributes: PlayroomTestSpecAttributes = {
         isArrayed: true,
         specPropertyType: SpecPropertyType.RANGED,
     },
+    arrayedPropertyWithInitialValue: {
+        arrayedNewElementInitialValue: 6,
+        formattedName: 'example array of ranged property',
+        isArrayed: true,
+        specPropertyType: SpecPropertyType.RANGED,
+    },
     optionedPropertyOne: {
         constraint: [
             {
