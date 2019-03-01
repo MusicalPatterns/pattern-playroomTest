@@ -4,13 +4,13 @@ import { PLAYROOM_TEST_INITIAL_BASE_DURATION, PLAYROOM_TEST_INITIAL_BASE_FREQUEN
 import {
     DIFFERENT,
     PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_VALUE,
+    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
 } from './constants'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from './types'
 
 const onlyPatternParticularInitial: PlayroomTestSpec = {
     arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    arrayedPropertyWithInitialValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_VALUE,
+    arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
     toggledProperty: true,
@@ -28,7 +28,7 @@ const initial: PlayroomTestSpec = {
 
 const differentInitial: PlayroomTestSpec = {
     arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    arrayedPropertyWithInitialValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_VALUE,
+    arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
     toggledProperty: false,

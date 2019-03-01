@@ -22,7 +22,7 @@ interface PlayroomTestSpecAttributes extends SpecAttributes<PlayroomTestSpec> {
     [ StandardSpecProperties.BASE_DURATION ]: RangedSpecPropertyAttributes,
     [ StandardSpecProperties.BASE_FREQUENCY ]: RangedSpecPropertyAttributes,
     arrayedProperty: RangedSpecPropertyAttributes,
-    arrayedPropertyWithInitialValue: RangedSpecPropertyAttributes,
+    arrayedPropertyWithInitialElementValue: RangedSpecPropertyAttributes,
     optionedPropertyOne: OptionedSpecPropertyAttributes,
     optionedPropertyTwo: OptionedSpecPropertyAttributes,
     toggledProperty: ToggledSpecPropertyAttributes,
@@ -30,7 +30,7 @@ interface PlayroomTestSpecAttributes extends SpecAttributes<PlayroomTestSpec> {
 
 interface PlayroomTestSpec extends StandardSpec {
     arrayedProperty: number[],
-    arrayedPropertyWithInitialValue: number[],
+    arrayedPropertyWithInitialElementValue: number[],
     optionedPropertyOne: OptionedPropertyOneOptions,
     optionedPropertyTwo: OptionedPropertyTwoOptions,
     toggledProperty: boolean,
