@@ -5,6 +5,7 @@ export {
     specDataOnlyPatternParticularInitial,
     specDataValidation,
     specDataPresets,
+    specDataLongDuration,
 } from './data'
 export {
     PlayroomTestSpec,

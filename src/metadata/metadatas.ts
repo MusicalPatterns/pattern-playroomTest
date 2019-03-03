@@ -56,6 +56,13 @@ const playroomTestPresetsMetadata: Metadata = {
     originalPublish: '2019-01-18T11:00:00.000Z',
 }
 
+const playroomTestLongDurationMetadata: Metadata = {
+    ...baseMetadata,
+    musicalIdeaIllustrated: 'long duration',
+    order: 8,
+    originalPublish: '2019-03-03T11:00:00.000Z',
+}
+
 export {
     playroomTestSpecControlsMetadata,
     playroomTestPostMetadata,
@@ -64,4 +71,5 @@ export {
     playroomTestOnlyStandardSpecMetadata,
     playroomTestValidationMetadata,
     playroomTestPresetsMetadata,
+    playroomTestLongDurationMetadata,
 }

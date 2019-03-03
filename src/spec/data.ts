@@ -1,6 +1,12 @@
 import { RangedInputType, SpecData, StandardSpec, StandardSpecProperties } from '@musical-patterns/pattern'
 import { attributes } from './attributes'
-import { differentInitial, initial, onlyPatternParticularInitial, onlyStandardInitial } from './initial'
+import {
+    differentInitial,
+    initial,
+    longDurationInitial,
+    onlyPatternParticularInitial,
+    onlyStandardInitial,
+} from './initial'
 import { presets } from './presets'
 import { PlayroomTestSpec } from './types'
 import { validationFunction } from './validation'
@@ -43,6 +49,12 @@ const specDataPresets: SpecData<PlayroomTestSpec> = {
     presets,
 }
 
+const specDataLongDuration: SpecData<PlayroomTestSpec> = {
+    attributes,
+    initial: longDurationInitial,
+    presets,
+}
+
 export {
     specData,
     differentSpecData,
@@ -50,4 +62,5 @@ export {
     specDataOnlyPatternParticularInitial,
     specDataValidation,
     specDataPresets,
+    specDataLongDuration,
 }
