@@ -4,15 +4,12 @@ import {
     PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
     PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
 } from './constants'
+import { initial } from './initial'
 import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from './types'
 
 const presetSpec: PlayroomTestSpec = {
-    arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
-    optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
+    ...initial,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
-    stringedProperty: 'ABC',
-    toggledProperty: false,
 }
 
 const otherPresetSpec: PlayroomTestSpec = {
