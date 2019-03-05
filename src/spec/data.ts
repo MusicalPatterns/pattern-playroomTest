@@ -45,7 +45,7 @@ const specDataValidation: SpecData<PlayroomTestSpec> = {
 
 const specDataPresets: SpecData<PlayroomTestSpec> = {
     attributes,
-    initial: onlyPatternParticularInitial,
+    initial,
     presets,
 }
 
