@@ -4,6 +4,7 @@ import {
     SpecAttributes,
     StandardSpec,
     StandardSpecProperties,
+    StringedSpecPropertyAttributes,
     ToggledSpecPropertyAttributes,
 } from '@musical-patterns/pattern'
 
@@ -25,6 +26,7 @@ interface PlayroomTestSpecAttributes extends SpecAttributes<PlayroomTestSpec> {
     arrayedPropertyWithInitialElementValue: RangedSpecPropertyAttributes,
     optionedPropertyOne: OptionedSpecPropertyAttributes,
     optionedPropertyTwo: OptionedSpecPropertyAttributes,
+    stringedProperty: StringedSpecPropertyAttributes,
     toggledProperty: ToggledSpecPropertyAttributes,
 }
 
@@ -33,6 +35,7 @@ interface PlayroomTestSpec extends StandardSpec {
     arrayedPropertyWithInitialElementValue: number[],
     optionedPropertyOne: OptionedPropertyOneOptions,
     optionedPropertyTwo: OptionedPropertyTwoOptions,
+    stringedProperty: string,
     toggledProperty: boolean,
 }
 

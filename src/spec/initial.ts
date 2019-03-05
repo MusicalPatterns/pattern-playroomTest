@@ -15,6 +15,7 @@ const onlyPatternParticularInitial: PlayroomTestSpec = {
     arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
+    stringedProperty: 'ABE',
     toggledProperty: true,
 }
 
@@ -33,6 +34,7 @@ const differentInitial: PlayroomTestSpec = {
     arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
+    stringedProperty: 'ABF',
     toggledProperty: false,
     [ StandardSpecProperties.BASE_DURATION ]:
         apply.Translation(PLAYROOM_TEST_INITIAL_BASE_DURATION, DIFFERENT),

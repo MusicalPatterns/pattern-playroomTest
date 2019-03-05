@@ -11,6 +11,7 @@ const presetSpec: PlayroomTestSpec = {
     arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
+    stringedProperty: 'ABC',
     toggledProperty: false,
 }
 
@@ -19,6 +20,7 @@ const otherPresetSpec: PlayroomTestSpec = {
     arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
+    stringedProperty: 'ABD',
     toggledProperty: true,
 }
 

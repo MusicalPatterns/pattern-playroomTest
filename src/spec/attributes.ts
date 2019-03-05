@@ -58,6 +58,15 @@ const attributes: PlayroomTestSpecAttributes = {
         formattedName: 'example optioned property two',
         specPropertyType: SpecPropertyType.OPTIONED,
     },
+    stringedProperty: {
+        constraint: {
+            maxLength: 4,
+            minLength: 3,
+        },
+        formattedName: `example property that's a string`,
+        order: 6,
+        specPropertyType: SpecPropertyType.STRINGED,
+    },
     toggledProperty: {
         formattedName: 'example on/off property',
         order: 1,
