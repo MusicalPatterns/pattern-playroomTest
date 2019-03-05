@@ -9,7 +9,7 @@ import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpe
 
 const presetSpec: PlayroomTestSpec = {
     ...initial,
-    optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
+    optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
 }
 
 const otherPresetSpec: PlayroomTestSpec = {
