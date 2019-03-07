@@ -1,8 +1,8 @@
 import {
     OptionedSpecPropertyAttributes,
     RangedSpecPropertyAttributes,
+    Spec,
     SpecAttributes,
-    StandardSpec,
     StandardSpecProperties,
     StringedSpecPropertyAttributes,
     ToggledSpecPropertyAttributes,
@@ -30,7 +30,7 @@ interface PlayroomTestSpecAttributes extends SpecAttributes<PlayroomTestSpec> {
     toggledProperty: ToggledSpecPropertyAttributes,
 }
 
-interface PlayroomTestSpec extends StandardSpec {
+interface PlayroomTestSpec extends Spec {
     arrayedProperty: number[],
     arrayedPropertyWithInitialElementValue: number[],
     optionedPropertyOne: OptionedPropertyOneOptions,

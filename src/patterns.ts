@@ -65,7 +65,7 @@ const playroomTestLongDuration: Pattern<spec.PlayroomTestSpec> = {
     specData: spec.specDataLongDuration,
 }
 
-const patterns: Patterns = {
+const patterns: Partial<Patterns> = {
     [ playroomTestSpecControls.id ]: playroomTestSpecControls,
     [ playroomTestPost.id ]: playroomTestPost,
     [ playroomTestTimeControls.id ]: playroomTestTimeControls,
