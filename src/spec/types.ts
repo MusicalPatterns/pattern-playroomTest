@@ -1,11 +1,11 @@
 import {
-    OptionedSpecPropertyAttributes,
-    RangedSpecPropertyAttributes,
+    Attributes,
+    OptionedPropertyAttributes,
+    RangedPropertyAttributes,
     Spec,
-    SpecAttributes,
-    StandardSpecProperties,
-    StringedSpecPropertyAttributes,
-    ToggledSpecPropertyAttributes,
+    StandardProperties,
+    StringedPropertyAttributes,
+    ToggledPropertyAttributes,
 } from '@musical-patterns/pattern'
 
 enum OptionedPropertyOneOptions {
@@ -19,20 +19,20 @@ enum OptionedPropertyTwoOptions {
     OPTION_THE_SECOND = 'OPTION_THE_SECOND',
 }
 
-interface PlayroomTestSpecAttributes extends SpecAttributes<PlayroomTestSpec> {
-    [ StandardSpecProperties.BASE_DURATION ]: RangedSpecPropertyAttributes,
-    [ StandardSpecProperties.BASE_FREQUENCY ]: RangedSpecPropertyAttributes,
-    arrayedProperty: RangedSpecPropertyAttributes,
-    arrayedPropertyWithInitialElementValue: RangedSpecPropertyAttributes,
-    optionedPropertyOne: OptionedSpecPropertyAttributes,
-    optionedPropertyTwo: OptionedSpecPropertyAttributes,
-    stringedProperty: StringedSpecPropertyAttributes,
-    toggledProperty: ToggledSpecPropertyAttributes,
+interface PlayroomTestAttributes extends Attributes<PlayroomTestSpec> {
+    [ StandardProperties.BASE_DURATION ]: RangedPropertyAttributes,
+    [ StandardProperties.BASE_FREQUENCY ]: RangedPropertyAttributes,
+    arrayedProperty: RangedPropertyAttributes,
+    arrayedPropertyWithInitialFieldValue: RangedPropertyAttributes,
+    optionedPropertyOne: OptionedPropertyAttributes,
+    optionedPropertyTwo: OptionedPropertyAttributes,
+    stringedProperty: StringedPropertyAttributes,
+    toggledProperty: ToggledPropertyAttributes,
 }
 
 interface PlayroomTestSpec extends Spec {
     arrayedProperty: number[],
-    arrayedPropertyWithInitialElementValue: number[],
+    arrayedPropertyWithInitialFieldValue: number[],
     optionedPropertyOne: OptionedPropertyOneOptions,
     optionedPropertyTwo: OptionedPropertyTwoOptions,
     stringedProperty: string,
@@ -41,7 +41,7 @@ interface PlayroomTestSpec extends Spec {
 
 export {
     PlayroomTestSpec,
-    PlayroomTestSpecAttributes,
+    PlayroomTestAttributes,
     OptionedPropertyOneOptions,
     OptionedPropertyTwoOptions,
 }

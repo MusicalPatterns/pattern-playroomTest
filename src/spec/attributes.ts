@@ -1,15 +1,15 @@
 import {
+    PropertyType,
     RangedInputType,
-    SpecPropertyType,
-    standardSpecAttributes,
-    StandardSpecProperties,
+    standardAttributes,
+    StandardProperties,
 } from '@musical-patterns/pattern'
 import { from } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_BASE_DURATION, PLAYROOM_TEST_MIN_BASE_DURATION } from '../constants'
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpecAttributes } from './types'
+import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestAttributes } from './types'
 
-const attributes: PlayroomTestSpecAttributes = {
-    ...standardSpecAttributes,
+const attributes: PlayroomTestAttributes = {
+    ...standardAttributes,
     arrayedProperty: {
         constraint: {
             min: 0,
@@ -17,14 +17,14 @@ const attributes: PlayroomTestSpecAttributes = {
         formattedName: 'example array of ranged property',
         hideInput: RangedInputType.RANGE,
         isArrayed: true,
-        specPropertyType: SpecPropertyType.RANGED,
+        propertyType: PropertyType.RANGED,
     },
-    arrayedPropertyWithInitialElementValue: {
-        arrayedNewElementInitialValue: 6,
+    arrayedPropertyWithInitialFieldValue: {
+        arrayedNewFieldInitialValue: 6,
         formattedName: 'example array of ranged property, with an initial value for its elements',
         hideInput: RangedInputType.NUMBER,
         isArrayed: true,
-        specPropertyType: SpecPropertyType.RANGED,
+        propertyType: PropertyType.RANGED,
     },
     optionedPropertyOne: {
         constraint: [
@@ -44,7 +44,7 @@ const attributes: PlayroomTestSpecAttributes = {
             },
         ],
         formattedName: 'example optioned property one',
-        specPropertyType: SpecPropertyType.OPTIONED,
+        propertyType: PropertyType.OPTIONED,
     },
     optionedPropertyTwo: {
         constraint: [
@@ -58,7 +58,7 @@ const attributes: PlayroomTestSpecAttributes = {
             },
         ],
         formattedName: 'example optioned property two',
-        specPropertyType: SpecPropertyType.OPTIONED,
+        propertyType: PropertyType.OPTIONED,
     },
     stringedProperty: {
         constraint: {
@@ -67,15 +67,15 @@ const attributes: PlayroomTestSpecAttributes = {
         },
         formattedName: `example property that's a string`,
         order: 6,
-        specPropertyType: SpecPropertyType.STRINGED,
+        propertyType: PropertyType.STRINGED,
     },
     toggledProperty: {
         formattedName: 'example on/off property',
         order: 1,
-        specPropertyType: SpecPropertyType.TOGGLED,
+        propertyType: PropertyType.TOGGLED,
     },
-    [ StandardSpecProperties.BASE_DURATION ]: {
-        ...standardSpecAttributes[ StandardSpecProperties.BASE_DURATION ],
+    [ StandardProperties.BASE_DURATION ]: {
+        ...standardAttributes[ StandardProperties.BASE_DURATION ],
         constraint: {
             excludeMax: true,
             excludeMin: true,
@@ -85,8 +85,8 @@ const attributes: PlayroomTestSpecAttributes = {
         formattedName: 'example ranged property one',
         order: 2,
     },
-    [ StandardSpecProperties.BASE_FREQUENCY ]: {
-        ...standardSpecAttributes[ StandardSpecProperties.BASE_DURATION ],
+    [ StandardProperties.BASE_FREQUENCY ]: {
+        ...standardAttributes[ StandardProperties.BASE_DURATION ],
         description: 'I need to describe something to you and it is super cereal you guys',
         formattedName: 'example ranged property two',
         hideInput: RangedInputType.RANGE,

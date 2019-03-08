@@ -1,4 +1,4 @@
-import { RangedInputType, SpecData, StandardSpec, StandardSpecProperties } from '@musical-patterns/pattern'
+import { Data, RangedInputType, StandardProperties, StandardSpec } from '@musical-patterns/pattern'
 import { attributes } from './attributes'
 import {
     differentInitial,
@@ -11,56 +11,56 @@ import { presets } from './presets'
 import { PlayroomTestSpec } from './types'
 import { validationFunction } from './validation'
 
-const specData: SpecData<PlayroomTestSpec> = {
+const data: Data<PlayroomTestSpec> = {
     attributes,
     initial,
 }
 
-const differentSpecData: SpecData<PlayroomTestSpec> = {
+const differentData: Data<PlayroomTestSpec> = {
     attributes: {
         ...attributes,
-        [ StandardSpecProperties.BASE_FREQUENCY ]: {
-            ...attributes[ StandardSpecProperties.BASE_FREQUENCY ],
+        [ StandardProperties.BASE_FREQUENCY ]: {
+            ...attributes[ StandardProperties.BASE_FREQUENCY ],
             hideInput: RangedInputType.NUMBER,
         },
     },
     initial: differentInitial,
 }
 
-const specDataOnlyStandardInitial: SpecData<StandardSpec> = {
+const dataOnlyStandardInitial: Data<StandardSpec> = {
     attributes,
     initial: onlyStandardInitial,
 }
 
-const specDataOnlyPatternParticularInitial: SpecData<PlayroomTestSpec> = {
+const dataOnlyPatternParticularInitial: Data<PlayroomTestSpec> = {
     attributes,
     initial: onlyPatternParticularInitial,
 }
 
-const specDataValidation: SpecData<PlayroomTestSpec> = {
+const dataValidation: Data<PlayroomTestSpec> = {
     attributes,
     initial,
     validationFunction,
 }
 
-const specDataPresets: SpecData<PlayroomTestSpec> = {
+const dataPresets: Data<PlayroomTestSpec> = {
     attributes,
     initial,
     presets,
 }
 
-const specDataLongDuration: SpecData<PlayroomTestSpec> = {
+const dataLongDuration: Data<PlayroomTestSpec> = {
     attributes,
     initial: longDurationInitial,
     presets,
 }
 
 export {
-    specData,
-    differentSpecData,
-    specDataOnlyStandardInitial,
-    specDataOnlyPatternParticularInitial,
-    specDataValidation,
-    specDataPresets,
-    specDataLongDuration,
+    data,
+    differentData,
+    dataOnlyStandardInitial,
+    dataOnlyPatternParticularInitial,
+    dataValidation,
+    dataPresets,
+    dataLongDuration,
 }

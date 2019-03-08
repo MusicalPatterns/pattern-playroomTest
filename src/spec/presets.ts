@@ -14,7 +14,7 @@ const presetSpec: PlayroomTestSpec = {
 
 const otherPresetSpec: PlayroomTestSpec = {
     arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
+    arrayedPropertyWithInitialFieldValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
     stringedProperty: 'ABD',

@@ -1,4 +1,4 @@
-import { StandardSpec, StandardSpecProperties } from '@musical-patterns/pattern'
+import { StandardProperties, StandardSpec } from '@musical-patterns/pattern'
 import { apply } from '@musical-patterns/utilities'
 import {
     DIFFERENT,
@@ -12,7 +12,7 @@ import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpe
 
 const onlyPatternParticularInitial: PlayroomTestSpec = {
     arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
+    arrayedPropertyWithInitialFieldValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
     stringedProperty: 'ABC',
@@ -20,8 +20,8 @@ const onlyPatternParticularInitial: PlayroomTestSpec = {
 }
 
 const onlyStandardInitial: StandardSpec = {
-    [ StandardSpecProperties.BASE_DURATION ]: PLAYROOM_TEST_INITIAL_BASE_DURATION,
-    [ StandardSpecProperties.BASE_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
+    [ StandardProperties.BASE_DURATION ]: PLAYROOM_TEST_INITIAL_BASE_DURATION,
+    [ StandardProperties.BASE_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
 }
 
 const initial: PlayroomTestSpec = {
@@ -31,20 +31,20 @@ const initial: PlayroomTestSpec = {
 
 const differentInitial: PlayroomTestSpec = {
     arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    arrayedPropertyWithInitialElementValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
+    arrayedPropertyWithInitialFieldValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
     optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
     optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
     stringedProperty: 'ABF',
     toggledProperty: false,
-    [ StandardSpecProperties.BASE_DURATION ]:
+    [ StandardProperties.BASE_DURATION ]:
         apply.Translation(PLAYROOM_TEST_INITIAL_BASE_DURATION, DIFFERENT),
-    [ StandardSpecProperties.BASE_FREQUENCY ]:
+    [ StandardProperties.BASE_FREQUENCY ]:
         apply.Translation(PLAYROOM_TEST_INITIAL_BASE_FREQUENCY, DIFFERENT),
 }
 
 const longDurationInitial: PlayroomTestSpec = {
     ...initial,
-    [ StandardSpecProperties.BASE_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
+    [ StandardProperties.BASE_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
 }
 
 export {
