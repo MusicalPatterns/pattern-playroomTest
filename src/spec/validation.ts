@@ -18,7 +18,7 @@ const validationFunction: SpecValidationFunction<PlayroomTestSpec> =
 
         if (isEven(arrayedProperty.length)) {
             return {
-                arrayedProperty: 'arrays can only be odd in length, duoy',
+                arrayedProperty: arrayedProperty.map(() => 'arrays can only be odd in length, duoy'),
             }
         }
 
