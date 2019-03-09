@@ -5,20 +5,21 @@ import {
     PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
 } from './constants'
 import { initial } from './initial'
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestSpec } from './types'
+import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestProperty, PlayroomTestSpec } from './types'
 
 const presetSpec: PlayroomTestSpec = {
     ...initial,
-    optionedPropertyOne: OptionedPropertyOneOptions.OPTION_ONE,
+    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOptions.OPTION_ONE,
 }
 
 const otherPresetSpec: PlayroomTestSpec = {
-    arrayedProperty: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    arrayedPropertyWithInitialFieldValue: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
-    optionedPropertyOne: OptionedPropertyOneOptions.OPTION_TWO,
-    optionedPropertyTwo: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
-    stringedProperty: 'ABD',
-    toggledProperty: true,
+    [ PlayroomTestProperty.ARRAYED_PROPERTY ]: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
+    [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]:
+    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
+    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOptions.OPTION_TWO,
+    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
+    [ PlayroomTestProperty.STRINGED_PROPERTY ]: 'ABD',
+    [ PlayroomTestProperty.TOGGLED_PROPERTY ]: true,
 }
 
 const presetOne: Preset<PlayroomTestSpec> = {
@@ -37,7 +38,7 @@ const presetThree: Preset<PlayroomTestSpec> = {
     description: 'this preset exists to QA preset presentation',
     spec: {
         ...presetSpec,
-        optionedPropertyOne: OptionedPropertyOneOptions.OPTION_THREE,
+        [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOptions.OPTION_THREE,
     },
 }
 

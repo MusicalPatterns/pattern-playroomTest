@@ -1,87 +1,47 @@
-import {
-    PropertyType,
-    RangedInputType,
-    standardAttributes,
-    StandardProperties,
-} from '@musical-patterns/pattern'
-import { from } from '@musical-patterns/utilities'
-import { PLAYROOM_TEST_MAX_BASE_DURATION, PLAYROOM_TEST_MIN_BASE_DURATION } from '../constants'
-import { OptionedPropertyOneOptions, OptionedPropertyTwoOptions, PlayroomTestAttributes } from './types'
+import { PropertyType, RangedInputType, standardAttributes, StandardProperties } from '@musical-patterns/pattern'
+import { optionedConstraints, rangedConstraints, stringedConstraints } from './constraints'
+import { PlayroomTestAttributes, PlayroomTestProperty } from './types'
 
 const attributes: PlayroomTestAttributes = {
     ...standardAttributes,
-    arrayedProperty: {
-        constraint: {
-            min: 0,
-        },
+    [ PlayroomTestProperty.ARRAYED_PROPERTY ]: {
+        constraint: rangedConstraints[ PlayroomTestProperty.ARRAYED_PROPERTY ],
         formattedName: 'example array of ranged property',
         hideInput: RangedInputType.RANGE,
         isArrayed: true,
         propertyType: PropertyType.RANGED,
     },
-    arrayedPropertyWithInitialFieldValue: {
+    [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]: {
         arrayedNewFieldInitialValue: 6,
         formattedName: 'example array of ranged property, with an initial value for its elements',
         hideInput: RangedInputType.NUMBER,
         isArrayed: true,
         propertyType: PropertyType.RANGED,
     },
-    optionedPropertyOne: {
-        constraint: [
-            {
-                formattedName: 'Option one',
-                key: OptionedPropertyOneOptions.OPTION_ONE,
-            },
-            {
-                formattedName: 'Option two',
-                key: OptionedPropertyOneOptions.OPTION_TWO,
-                order: 1,
-            },
-            {
-                formattedName: 'Option three',
-                key: OptionedPropertyOneOptions.OPTION_THREE,
-                order: 2,
-            },
-        ],
+    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: {
+        constraint: optionedConstraints[ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ],
         formattedName: 'example optioned property one',
         propertyType: PropertyType.OPTIONED,
     },
-    optionedPropertyTwo: {
-        constraint: [
-            {
-                formattedName: 'Option the First',
-                key: OptionedPropertyTwoOptions.OPTION_THE_FIRST,
-            },
-            {
-                description: 'Option the Second has no formatted name, but it sure does have a description!',
-                key: OptionedPropertyTwoOptions.OPTION_THE_SECOND,
-            },
-        ],
+    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: {
+        constraint: optionedConstraints[ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ],
         formattedName: 'example optioned property two',
         propertyType: PropertyType.OPTIONED,
     },
-    stringedProperty: {
-        constraint: {
-            maxLength: 4,
-            minLength: 3,
-        },
+    [ PlayroomTestProperty.STRINGED_PROPERTY ]: {
+        constraint: stringedConstraints[ PlayroomTestProperty.STRINGED_PROPERTY ],
         formattedName: `example property that's a string`,
         order: 6,
         propertyType: PropertyType.STRINGED,
     },
-    toggledProperty: {
+    [ PlayroomTestProperty.TOGGLED_PROPERTY ]: {
         formattedName: 'example on/off property',
         order: 1,
         propertyType: PropertyType.TOGGLED,
     },
     [ StandardProperties.BASE_DURATION ]: {
         ...standardAttributes[ StandardProperties.BASE_DURATION ],
-        constraint: {
-            excludeMax: true,
-            excludeMin: true,
-            max: from.Ms(PLAYROOM_TEST_MAX_BASE_DURATION),
-            min: from.Ms(PLAYROOM_TEST_MIN_BASE_DURATION),
-        },
+        constraint: rangedConstraints[ StandardProperties.BASE_DURATION ],
         formattedName: 'example ranged property one',
         order: 2,
     },
