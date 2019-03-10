@@ -1,1 +1,1 @@
-export { buildEntities } from './entities'
+export { materializeEntities } from './entities'

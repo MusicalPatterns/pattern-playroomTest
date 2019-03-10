@@ -1,10 +1,10 @@
-import { BuildEntitiesFunction, Entity } from '@musical-patterns/compiler'
+import { Entity, MaterializeEntities } from '@musical-patterns/compiler'
 import { StandardProperty } from '@musical-patterns/pattern'
 import { apply, from, ONE_HALF, Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpec } from '../spec'
 import { PLAYROOM_TEST_SCALAR } from './constants'
 
-const buildEntities: BuildEntitiesFunction =
+const materializeEntities: MaterializeEntities =
     (spec: PlayroomTestSpec): Entity[] => {
         const durationScalar: Scalar = from.Ms(apply.Scalar(
             spec[ StandardProperty.BASE_DURATION ] || to.Ms(to.Scalar(1)),
@@ -18,11 +18,11 @@ const buildEntities: BuildEntitiesFunction =
 
         return [
             {
-                noteSpecs: [ {
-                    durationSpec: {
+                notes: [ {
+                    duration: {
                         scalar: durationScalar,
                     },
-                    pitchSpec: {
+                    pitch: {
                         scalar: pitchScalar,
                     },
                 } ],
@@ -31,5 +31,5 @@ const buildEntities: BuildEntitiesFunction =
     }
 
 export {
-    buildEntities,
+    materializeEntities,
 }

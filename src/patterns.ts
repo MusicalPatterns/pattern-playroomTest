@@ -1,12 +1,12 @@
 import { Material, Scale } from '@musical-patterns/compiler'
 import { Id, Pattern, Patterns, StandardSpec } from '@musical-patterns/pattern'
-import { buildEntities } from './material'
+import { materializeEntities } from './material'
 import * as metadata from './metadata'
 import * as spec from './spec'
 
 const material: Material = {
-    buildEntitiesFunction: buildEntities,
-    buildScalesFunction: (): Scale[] => [],
+    materializeEntities,
+    materializeScales: (): Scale[] => [],
 }
 
 const playroomTestSpecControls: Pattern<spec.PlayroomTestSpec> = {
