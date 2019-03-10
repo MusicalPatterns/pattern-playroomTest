@@ -1,4 +1,4 @@
-import { Data, PropertyType, RangedInputType, StandardProperties, StandardSpec } from '@musical-patterns/pattern'
+import { Data, PropertyType, RangedInputType, StandardProperty, StandardSpec } from '@musical-patterns/pattern'
 import { attributes } from './attributes'
 import {
     differentInitial,
@@ -19,8 +19,8 @@ const data: Data<PlayroomTestSpec> = {
 const differentData: Data<PlayroomTestSpec> = {
     attributes: {
         ...attributes,
-        [ StandardProperties.BASE_FREQUENCY ]: {
-            ...attributes[ StandardProperties.BASE_FREQUENCY ],
+        [ StandardProperty.BASE_FREQUENCY ]: {
+            ...attributes[ StandardProperty.BASE_FREQUENCY ],
             hideInput: RangedInputType.NUMBER,
         },
         [ PlayroomTestProperty.ARRAYED_PROPERTY ]: {

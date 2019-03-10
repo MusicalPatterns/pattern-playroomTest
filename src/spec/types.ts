@@ -3,18 +3,18 @@ import {
     OptionedPropertyAttributes,
     RangedPropertyAttributes,
     Spec,
-    StandardProperties,
+    StandardProperty,
     StringedPropertyAttributes,
     ToggledPropertyAttributes,
 } from '@musical-patterns/pattern'
 
-enum OptionedPropertyOneOptions {
+enum OptionedPropertyOneOption {
     OPTION_ONE = 'OPTION_ONE',
     OPTION_TWO = 'OPTION_TWO',
     OPTION_THREE = 'OPTION_THREE',
 }
 
-enum OptionedPropertyTwoOptions {
+enum OptionedPropertyTwoOption {
     OPTION_THE_FIRST = 'OPTION_THE_FIRST',
     OPTION_THE_SECOND = 'OPTION_THE_SECOND',
 }
@@ -29,8 +29,8 @@ enum PlayroomTestProperty {
 }
 
 interface PlayroomTestAttributes extends Attributes<PlayroomTestSpec> {
-    [ StandardProperties.BASE_DURATION ]: RangedPropertyAttributes,
-    [ StandardProperties.BASE_FREQUENCY ]: RangedPropertyAttributes,
+    [ StandardProperty.BASE_DURATION ]: RangedPropertyAttributes,
+    [ StandardProperty.BASE_FREQUENCY ]: RangedPropertyAttributes,
     [ PlayroomTestProperty.ARRAYED_PROPERTY ]: RangedPropertyAttributes,
     [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]: RangedPropertyAttributes,
     [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyAttributes,
@@ -42,8 +42,8 @@ interface PlayroomTestAttributes extends Attributes<PlayroomTestSpec> {
 interface PlayroomTestSpec extends Spec {
     [ PlayroomTestProperty.ARRAYED_PROPERTY ]: number[],
     [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]: number[],
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOptions,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyTwoOptions,
+    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOption,
+    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyTwoOption,
     [ PlayroomTestProperty.STRINGED_PROPERTY ]: string,
     [ PlayroomTestProperty.TOGGLED_PROPERTY ]: boolean,
 }
@@ -51,7 +51,7 @@ interface PlayroomTestSpec extends Spec {
 export {
     PlayroomTestSpec,
     PlayroomTestAttributes,
-    OptionedPropertyOneOptions,
-    OptionedPropertyTwoOptions,
+    OptionedPropertyOneOption,
+    OptionedPropertyTwoOption,
     PlayroomTestProperty,
 }

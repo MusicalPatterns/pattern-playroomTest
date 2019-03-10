@@ -1,4 +1,4 @@
-import { PropertyType, RangedInputType, standardAttributes, StandardProperties } from '@musical-patterns/pattern'
+import { PropertyType, RangedInputType, standardAttributes, StandardProperty } from '@musical-patterns/pattern'
 import { optionedConstraints, rangedConstraints, stringedConstraints } from './constraints'
 import { PlayroomTestAttributes, PlayroomTestProperty } from './types'
 
@@ -39,14 +39,14 @@ const attributes: PlayroomTestAttributes = {
         order: 1,
         propertyType: PropertyType.TOGGLED,
     },
-    [ StandardProperties.BASE_DURATION ]: {
-        ...standardAttributes[ StandardProperties.BASE_DURATION ],
-        constraint: rangedConstraints[ StandardProperties.BASE_DURATION ],
+    [ StandardProperty.BASE_DURATION ]: {
+        ...standardAttributes[ StandardProperty.BASE_DURATION ],
+        constraint: rangedConstraints[ StandardProperty.BASE_DURATION ],
         formattedName: 'example ranged property one',
         order: 2,
     },
-    [ StandardProperties.BASE_FREQUENCY ]: {
-        ...standardAttributes[ StandardProperties.BASE_DURATION ],
+    [ StandardProperty.BASE_FREQUENCY ]: {
+        ...standardAttributes[ StandardProperty.BASE_DURATION ],
         description: 'I need to describe something to you and it is super cereal you guys',
         formattedName: 'example ranged property two',
         hideInput: RangedInputType.RANGE,
