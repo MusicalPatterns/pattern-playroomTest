@@ -1,5 +1,5 @@
 import { Preset } from '@musical-patterns/pattern'
-import { DictionaryOf } from '@musical-patterns/utilities'
+import { ObjectOf } from '@musical-patterns/utilities'
 import {
     PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
     PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
@@ -42,7 +42,7 @@ const presetThree: Preset<PlayroomTestSpec> = {
     },
 }
 
-const presets: DictionaryOf<Preset<PlayroomTestSpec>> = {
+const presets: ObjectOf<Preset<PlayroomTestSpec>> = {
     presetOne,
     presetThree,
     presetTwo,

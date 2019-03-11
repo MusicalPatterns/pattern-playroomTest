@@ -1,9 +1,9 @@
 import { OptionedConstraint, RangedConstraint, StandardProperty, StringedConstraint } from '@musical-patterns/pattern'
-import { DictionaryOf, from } from '@musical-patterns/utilities'
+import { from, ObjectOf } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_BASE_DURATION, PLAYROOM_TEST_MIN_BASE_DURATION } from '../constants'
 import { OptionedPropertyOneOption, OptionedPropertyTwoOption, PlayroomTestProperty } from './types'
 
-const rangedConstraints: DictionaryOf<RangedConstraint> = {
+const rangedConstraints: ObjectOf<RangedConstraint> = {
     [ PlayroomTestProperty.ARRAYED_PROPERTY ]: {
         min: 0,
     },
@@ -15,7 +15,7 @@ const rangedConstraints: DictionaryOf<RangedConstraint> = {
     },
 }
 
-const optionedConstraints: DictionaryOf<OptionedConstraint> = {
+const optionedConstraints: ObjectOf<OptionedConstraint> = {
     [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: [
         {
             formattedName: 'Option one',
@@ -44,7 +44,7 @@ const optionedConstraints: DictionaryOf<OptionedConstraint> = {
     ],
 }
 
-const stringedConstraints: DictionaryOf<StringedConstraint> = {
+const stringedConstraints: ObjectOf<StringedConstraint> = {
     [ PlayroomTestProperty.STRINGED_PROPERTY ]: {
         maxLength: 4,
         minLength: 3,
