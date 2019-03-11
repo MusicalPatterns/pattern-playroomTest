@@ -1,12 +1,12 @@
 export {
-    data,
-    differentData,
-    dataOnlyStandardInitial,
-    dataOnlyPatternParticularInitial,
-    dataValidation,
-    dataPresets,
-    dataLongDuration,
-} from './data'
+    spec,
+    specDifferent,
+    specOnlyStandardInitial,
+    specOnlyPatternParticularInitial,
+    specValidation,
+    specPresets,
+    specLongDuration,
+} from './spec'
 export {
-    PlayroomTestSpec,
+    PlayroomTestSpecs,
 } from './types'

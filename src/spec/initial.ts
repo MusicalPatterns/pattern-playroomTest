@@ -1,52 +1,52 @@
-import { StandardProperty, StandardSpec } from '@musical-patterns/pattern'
+import { StandardSpec, StandardSpecs } from '@musical-patterns/pattern'
 import { apply } from '@musical-patterns/utilities'
 import {
     DIFFERENT,
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
+    PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
+    PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
     PLAYROOM_TEST_INITIAL_BASE_DURATION,
     PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
     PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
 } from './constants'
-import { OptionedPropertyOneOption, OptionedPropertyTwoOption, PlayroomTestProperty, PlayroomTestSpec } from './types'
+import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec, PlayroomTestSpecs } from './types'
 
-const onlyPatternParticularInitial: PlayroomTestSpec = {
-    [ PlayroomTestProperty.ARRAYED_PROPERTY ]: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]:
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOption.OPTION_TWO,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyTwoOption.OPTION_THE_FIRST,
-    [ PlayroomTestProperty.STRINGED_PROPERTY ]: 'ABC',
-    [ PlayroomTestProperty.TOGGLED_PROPERTY ]: true,
+const onlyPatternParticularInitial: PlayroomTestSpecs = {
+    [ PlayroomTestSpec.ARRAYED_SPEC ]: PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
+    [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]:
+    PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
+    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_TWO,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_FIRST,
+    [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABC',
+    [ PlayroomTestSpec.TOGGLED_SPEC ]: true,
 }
 
-const onlyStandardInitial: StandardSpec = {
-    [ StandardProperty.BASE_DURATION ]: PLAYROOM_TEST_INITIAL_BASE_DURATION,
-    [ StandardProperty.BASE_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
+const onlyStandardInitial: StandardSpecs = {
+    [ StandardSpec.BASE_DURATION ]: PLAYROOM_TEST_INITIAL_BASE_DURATION,
+    [ StandardSpec.BASE_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
 }
 
-const initial: PlayroomTestSpec = {
+const initial: PlayroomTestSpecs = {
     ...onlyPatternParticularInitial,
     ...onlyStandardInitial,
 }
 
-const differentInitial: PlayroomTestSpec = {
-    [ PlayroomTestProperty.ARRAYED_PROPERTY ]: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]:
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOption.OPTION_ONE,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyTwoOption.OPTION_THE_SECOND,
-    [ PlayroomTestProperty.STRINGED_PROPERTY ]: 'ABF',
-    [ PlayroomTestProperty.TOGGLED_PROPERTY ]: false,
-    [ StandardProperty.BASE_DURATION ]:
+const differentInitial: PlayroomTestSpecs = {
+    [ PlayroomTestSpec.ARRAYED_SPEC ]: PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
+    [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]:
+    PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
+    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_ONE,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
+    [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABF',
+    [ PlayroomTestSpec.TOGGLED_SPEC ]: false,
+    [ StandardSpec.BASE_DURATION ]:
         apply.Translation(PLAYROOM_TEST_INITIAL_BASE_DURATION, DIFFERENT),
-    [ StandardProperty.BASE_FREQUENCY ]:
+    [ StandardSpec.BASE_FREQUENCY ]:
         apply.Translation(PLAYROOM_TEST_INITIAL_BASE_FREQUENCY, DIFFERENT),
 }
 
-const longDurationInitial: PlayroomTestSpec = {
+const longDurationInitial: PlayroomTestSpecs = {
     ...initial,
-    [ StandardProperty.BASE_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
+    [ StandardSpec.BASE_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
 }
 
 export {

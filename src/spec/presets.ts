@@ -1,48 +1,48 @@
 import { Preset } from '@musical-patterns/pattern'
 import { ObjectOf } from '@musical-patterns/utilities'
 import {
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
+    PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
+    PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
 } from './constants'
 import { initial } from './initial'
-import { OptionedPropertyOneOption, OptionedPropertyTwoOption, PlayroomTestProperty, PlayroomTestSpec } from './types'
+import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec, PlayroomTestSpecs } from './types'
 
-const presetSpec: PlayroomTestSpec = {
+const presetSpecs: PlayroomTestSpecs = {
     ...initial,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOption.OPTION_ONE,
+    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_ONE,
 }
 
-const otherPresetSpec: PlayroomTestSpec = {
-    [ PlayroomTestProperty.ARRAYED_PROPERTY ]: PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY,
-    [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]:
-    PLAYROOM_TEST_INITIAL_ARRAYED_PROPERTY_WITH_INITIAL_ELEMENT_VALUE,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOption.OPTION_TWO,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyTwoOption.OPTION_THE_SECOND,
-    [ PlayroomTestProperty.STRINGED_PROPERTY ]: 'ABD',
-    [ PlayroomTestProperty.TOGGLED_PROPERTY ]: true,
+const otherPresetSpecs: PlayroomTestSpecs = {
+    [ PlayroomTestSpec.ARRAYED_SPEC ]: PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
+    [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]:
+    PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
+    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_TWO,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
+    [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABD',
+    [ PlayroomTestSpec.TOGGLED_SPEC ]: true,
 }
 
-const presetOne: Preset<PlayroomTestSpec> = {
+const presetOne: Preset<PlayroomTestSpecs> = {
     formattedName: 'Preset Uno',
     order: 4,
-    spec: presetSpec,
+    specs: presetSpecs,
 }
 
-const presetTwo: Preset<PlayroomTestSpec> = {
+const presetTwo: Preset<PlayroomTestSpecs> = {
     formattedName: 'Preset Dos',
     order: 7,
-    spec: otherPresetSpec,
+    specs: otherPresetSpecs,
 }
 
-const presetThree: Preset<PlayroomTestSpec> = {
+const presetThree: Preset<PlayroomTestSpecs> = {
     description: 'this preset exists to QA preset presentation',
-    spec: {
-        ...presetSpec,
-        [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOption.OPTION_THREE,
+    specs: {
+        ...presetSpecs,
+        [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_THREE,
     },
 }
 
-const presets: ObjectOf<Preset<PlayroomTestSpec>> = {
+const presets: ObjectOf<Preset<PlayroomTestSpecs>> = {
     presetOne,
     presetThree,
     presetTwo,

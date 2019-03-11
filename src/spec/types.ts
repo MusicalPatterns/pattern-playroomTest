@@ -1,57 +1,57 @@
 import {
-    Attributes,
-    OptionedPropertyAttributes,
-    RangedPropertyAttributes,
-    Spec,
-    StandardProperty,
-    StringedPropertyAttributes,
-    ToggledPropertyAttributes,
+    Configurations,
+    OptionedConfiguration,
+    RangedConfiguration,
+    Specs,
+    StandardSpec,
+    StringedConfiguration,
+    ToggledConfiguration,
 } from '@musical-patterns/pattern'
 
-enum OptionedPropertyOneOption {
+enum OptionedSpecOneOption {
     OPTION_ONE = 'OPTION_ONE',
     OPTION_TWO = 'OPTION_TWO',
     OPTION_THREE = 'OPTION_THREE',
 }
 
-enum OptionedPropertyTwoOption {
+enum OptionedSpecTwoOption {
     OPTION_THE_FIRST = 'OPTION_THE_FIRST',
     OPTION_THE_SECOND = 'OPTION_THE_SECOND',
 }
 
-enum PlayroomTestProperty {
-    ARRAYED_PROPERTY = 'arrayedProperty',
-    ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE = 'arrayedPropertyWithInitialFieldValue',
-    OPTIONED_PROPERTY_ONE = 'optionedPropertyOne',
-    OPTIONED_PROPERTY_TWO = 'optionedPropertyTwo',
-    STRINGED_PROPERTY = 'stringedProperty',
-    TOGGLED_PROPERTY = 'toggledProperty',
+enum PlayroomTestSpec {
+    ARRAYED_SPEC = 'arrayedSpec',
+    ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE = 'arrayedSpecWithInitialFieldValue',
+    OPTIONED_SPEC_ONE = 'optionedSpecOne',
+    OPTIONED_SPEC_TWO = 'optionedSpecTwo',
+    STRINGED_SPEC = 'stringedSpec',
+    TOGGLED_SPEC = 'toggledSpec',
 }
 
-interface PlayroomTestAttributes extends Attributes<PlayroomTestSpec> {
-    [ StandardProperty.BASE_DURATION ]: RangedPropertyAttributes,
-    [ StandardProperty.BASE_FREQUENCY ]: RangedPropertyAttributes,
-    [ PlayroomTestProperty.ARRAYED_PROPERTY ]: RangedPropertyAttributes,
-    [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]: RangedPropertyAttributes,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyAttributes,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyAttributes,
-    [ PlayroomTestProperty.STRINGED_PROPERTY ]: StringedPropertyAttributes,
-    [ PlayroomTestProperty.TOGGLED_PROPERTY ]: ToggledPropertyAttributes,
+interface PlayroomTestConfigurations extends Configurations<PlayroomTestSpecs> {
+    [ StandardSpec.BASE_DURATION ]: RangedConfiguration,
+    [ StandardSpec.BASE_FREQUENCY ]: RangedConfiguration,
+    [ PlayroomTestSpec.ARRAYED_SPEC ]: RangedConfiguration,
+    [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: RangedConfiguration,
+    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedConfiguration,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedConfiguration,
+    [ PlayroomTestSpec.STRINGED_SPEC ]: StringedConfiguration,
+    [ PlayroomTestSpec.TOGGLED_SPEC ]: ToggledConfiguration,
 }
 
-interface PlayroomTestSpec extends Spec {
-    [ PlayroomTestProperty.ARRAYED_PROPERTY ]: number[],
-    [ PlayroomTestProperty.ARRAYED_PROPERTY_WITH_INITIAL_FIELD_VALUE ]: number[],
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_ONE ]: OptionedPropertyOneOption,
-    [ PlayroomTestProperty.OPTIONED_PROPERTY_TWO ]: OptionedPropertyTwoOption,
-    [ PlayroomTestProperty.STRINGED_PROPERTY ]: string,
-    [ PlayroomTestProperty.TOGGLED_PROPERTY ]: boolean,
+interface PlayroomTestSpecs extends Specs {
+    [ PlayroomTestSpec.ARRAYED_SPEC ]: number[],
+    [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: number[],
+    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption,
+    [ PlayroomTestSpec.STRINGED_SPEC ]: string,
+    [ PlayroomTestSpec.TOGGLED_SPEC ]: boolean,
 }
 
 export {
+    PlayroomTestSpecs,
+    PlayroomTestConfigurations,
+    OptionedSpecOneOption,
+    OptionedSpecTwoOption,
     PlayroomTestSpec,
-    PlayroomTestAttributes,
-    OptionedPropertyOneOption,
-    OptionedPropertyTwoOption,
-    PlayroomTestProperty,
 }

@@ -1,24 +1,24 @@
-import { StandardProperty, ValidationFunction, ValidationResults } from '@musical-patterns/pattern'
+import { ComputeValidations, StandardSpec, Validations } from '@musical-patterns/pattern'
 import { from, Hz, isEven, Ms, Scalar, to } from '@musical-patterns/utilities'
-import { PlayroomTestSpec } from './types'
+import { PlayroomTestSpecs } from './types'
 
-const validationFunction: ValidationFunction<PlayroomTestSpec> =
-    (spec: PlayroomTestSpec): ValidationResults<PlayroomTestSpec> => {
-        const pitch: Scalar<Hz> = spec[ StandardProperty.BASE_FREQUENCY ] || to.Scalar(to.Hz(1))
-        const duration: Scalar<Ms> = spec[ StandardProperty.BASE_DURATION ] || to.Scalar(to.Ms(1))
+const computeValidations: ComputeValidations<PlayroomTestSpecs> =
+    (specs: PlayroomTestSpecs): Validations<PlayroomTestSpecs> => {
+        const pitch: Scalar<Hz> = specs[ StandardSpec.BASE_FREQUENCY ] || to.Scalar(to.Hz(1))
+        const duration: Scalar<Ms> = specs[ StandardSpec.BASE_DURATION ] || to.Scalar(to.Ms(1))
 
-        const arrayedProperty: number[] = spec.arrayedProperty
+        const arrayedSpec: number[] = specs.arrayedSpec
 
         if (from.Hz(pitch) < from.Ms(duration)) {
             return {
-                [ StandardProperty.BASE_FREQUENCY ]: 'pitch must be more than duration, obvs',
-                [ StandardProperty.BASE_DURATION ]: 'duration must be less than pitch, obvs',
+                [ StandardSpec.BASE_FREQUENCY ]: 'pitch must be more than duration, obvs',
+                [ StandardSpec.BASE_DURATION ]: 'duration must be less than pitch, obvs',
             }
         }
 
-        if (isEven(arrayedProperty.length)) {
+        if (isEven(arrayedSpec.length)) {
             return {
-                arrayedProperty: arrayedProperty.map(() => 'arrays can only be odd in length, duoy'),
+                arrayedSpec: arrayedSpec.map(() => 'arrays can only be odd in length, duoy'),
             }
         }
 
@@ -26,5 +26,5 @@ const validationFunction: ValidationFunction<PlayroomTestSpec> =
     }
 
 export {
-    validationFunction,
+    computeValidations,
 }
