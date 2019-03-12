@@ -25,7 +25,7 @@ const onlyStandardInitial: StandardSpecs = {
     [ StandardSpec.BASE_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
 }
 
-const initial: PlayroomTestSpecs = {
+const initials: PlayroomTestSpecs = {
     ...onlyPatternParticularInitial,
     ...onlyStandardInitial,
 }
@@ -45,14 +45,14 @@ const differentInitial: PlayroomTestSpecs = {
 }
 
 const longDurationInitial: PlayroomTestSpecs = {
-    ...initial,
+    ...initials,
     [ StandardSpec.BASE_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
 }
 
 export {
     onlyPatternParticularInitial,
     onlyStandardInitial,
-    initial,
+    initials,
     differentInitial,
     longDurationInitial,
 }

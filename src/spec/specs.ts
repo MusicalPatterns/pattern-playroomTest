@@ -1,37 +1,23 @@
-import { InputType, RangedInputType, Spec, StandardSpec, StandardSpecs } from '@musical-patterns/pattern'
-import { configurations } from './configurations'
+import { Spec, StandardSpecs } from '@musical-patterns/pattern'
+import { configurations, differentConfigurations } from './configurations'
 import {
     differentInitial,
-    initial,
+    initials,
     longDurationInitial,
     onlyPatternParticularInitial,
     onlyStandardInitial,
-} from './initial'
+} from './initials'
 import { presets } from './presets'
-import { PlayroomTestSpec, PlayroomTestSpecs } from './types'
-import { computeValidations } from './validation'
+import { PlayroomTestSpecs } from './types'
+import { computeValidations } from './validations'
 
 const spec: Spec<PlayroomTestSpecs> = {
     configurations,
-    initial,
+    initial: initials,
 }
 
 const specDifferent: Spec<PlayroomTestSpecs> = {
-    configurations: {
-        ...configurations,
-        [ StandardSpec.BASE_FREQUENCY ]: {
-            ...configurations[ StandardSpec.BASE_FREQUENCY ],
-            hideInput: RangedInputType.NUMBER,
-        },
-        [ PlayroomTestSpec.ARRAYED_SPEC ]: {
-            constraint: {
-                min: 0,
-            },
-            formattedName: 'example arrayed control',
-            inputType: InputType.RANGED,
-            isArrayed: true,
-        },
-    },
+    configurations: differentConfigurations,
     initial: differentInitial,
 }
 
@@ -48,12 +34,12 @@ const specOnlyPatternParticularInitial: Spec<PlayroomTestSpecs> = {
 const specValidation: Spec<PlayroomTestSpecs> = {
     computeValidations,
     configurations,
-    initial,
+    initial: initials,
 }
 
 const specPresets: Spec<PlayroomTestSpecs> = {
     configurations,
-    initial,
+    initial: initials,
     presets,
 }
 

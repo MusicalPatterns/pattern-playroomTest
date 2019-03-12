@@ -4,11 +4,11 @@ import {
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
 } from './constants'
-import { initial } from './initial'
+import { initials } from './initials'
 import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec, PlayroomTestSpecs } from './types'
 
 const presetSpecs: PlayroomTestSpecs = {
-    ...initial,
+    ...initials,
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_ONE,
 }
 

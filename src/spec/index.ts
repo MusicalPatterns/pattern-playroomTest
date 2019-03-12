@@ -6,7 +6,7 @@ export {
     specValidation,
     specPresets,
     specLongDuration,
-} from './spec'
+} from './specs'
 export {
     PlayroomTestSpecs,
 } from './types'
