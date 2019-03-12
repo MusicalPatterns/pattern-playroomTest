@@ -26,6 +26,8 @@ const playroomTestPostMetadata: Metadata = {
 
 const playroomTestTimeControlsMetadata: Metadata = {
     ...baseMetadata,
+    description: `I really should add a new pattern for testing text-only descriptions \
+    but this wouldn't be the first overloaded pattern here so why start being good now`,
     musicalIdeaIllustrated: 'time controls',
     originalPublish: '2019-01-18T07:00:00.000Z',
 }
