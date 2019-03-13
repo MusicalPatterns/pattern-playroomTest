@@ -55,18 +55,17 @@ const configurations: PlayroomTestConfigurations = {
 }
 
 const differentConfigurations: PlayroomTestConfigurations = {
+    ...standardConfigurations,
     ...configurations,
     [ StandardSpec.BASE_FREQUENCY ]: {
-        ...configurations[ StandardSpec.BASE_FREQUENCY ],
+        ...standardConfigurations[ StandardSpec.BASE_FREQUENCY ],
         hideInput: RangedInputType.NUMBER,
     },
     [ PlayroomTestSpec.ARRAYED_SPEC ]: {
+        ...configurations[ PlayroomTestSpec.ARRAYED_SPEC ],
         constraint: {
             min: 0,
         },
-        formattedName: 'example arrayed control',
-        inputType: InputType.RANGED,
-        isArrayed: true,
     },
 }
 
