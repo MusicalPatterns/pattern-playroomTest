@@ -13,39 +13,39 @@ import { computeValidations } from './validations'
 
 const spec: Spec<PlayroomTestSpecs> = {
     configurations,
-    initial: initials,
+    initialSpecs: initials,
 }
 
 const specDifferent: Spec<PlayroomTestSpecs> = {
     configurations: differentConfigurations,
-    initial: differentInitial,
+    initialSpecs: differentInitial,
 }
 
 const specOnlyStandardInitial: Spec<StandardSpecs> = {
     configurations,
-    initial: onlyStandardInitial,
+    initialSpecs: onlyStandardInitial,
 }
 
 const specOnlyPatternParticularInitial: Spec<PlayroomTestSpecs> = {
     configurations,
-    initial: onlyPatternParticularInitial,
+    initialSpecs: onlyPatternParticularInitial,
 }
 
 const specValidation: Spec<PlayroomTestSpecs> = {
     computeValidations,
     configurations,
-    initial: initials,
+    initialSpecs: initials,
 }
 
 const specPresets: Spec<PlayroomTestSpecs> = {
     configurations,
-    initial: initials,
+    initialSpecs: initials,
     presets,
 }
 
 const specLongDuration: Spec<PlayroomTestSpecs> = {
     configurations,
-    initial: longDurationInitial,
+    initialSpecs: longDurationInitial,
     presets,
 }
 
