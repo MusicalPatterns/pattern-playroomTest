@@ -12,7 +12,7 @@ const configurations: PlayroomTestConfigurations = {
         isArrayed: true,
     },
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: {
-        arrayedNewFieldInitialValue: 6,
+        arrayedNewFieldInitialValue: 0,
         formattedName: 'example arrayed control, with an initial value for its elements',
         hideInput: RangedInputType.NUMBER,
         inputType: InputType.RANGED,
