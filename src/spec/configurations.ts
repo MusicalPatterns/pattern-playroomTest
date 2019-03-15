@@ -62,10 +62,12 @@ const differentConfigurations: PlayroomTestConfigurations = {
         hideInput: RangedInputType.NUMBER,
     },
     [ PlayroomTestSpec.ARRAYED_SPEC ]: {
-        ...configurations[ PlayroomTestSpec.ARRAYED_SPEC ],
         constraint: {
             min: 0,
         },
+        formattedName: 'example arrayed control hiding neither input',
+        inputType: InputType.RANGED,
+        isArrayed: true,
     },
 }
 
