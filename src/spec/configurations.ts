@@ -46,7 +46,7 @@ const configurations: PlayroomTestConfigurations = {
         order: 2,
     },
     [ StandardSpec.BASE_FREQUENCY ]: {
-        ...standardConfigurations[ StandardSpec.BASE_DURATION ],
+        ...standardConfigurations[ StandardSpec.BASE_FREQUENCY ],
         description: 'I need to describe something to you and it is super cereal you guys',
         formattedName: 'example ranged control two',
         hideInput: RangedInputType.RANGE,
