@@ -10,6 +10,7 @@ const rangedConstraints: ObjectOf<RangedConstraint> = {
     [ StandardSpec.BASE_DURATION ]: {
         excludeMax: true,
         excludeMin: true,
+        integer: true,
         max: from.Ms(PLAYROOM_TEST_MAX_BASE_DURATION),
         min: from.Ms(PLAYROOM_TEST_MIN_BASE_DURATION),
     },
