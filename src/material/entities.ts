@@ -18,14 +18,20 @@ const materializeEntities: MaterializeEntities =
 
         return [
             {
-                notes: [ {
-                    duration: {
-                        scalar: durationScalar,
+                sections: [
+                    {
+                        notes: [
+                            {
+                                duration: {
+                                    scalar: durationScalar,
+                                },
+                                pitch: {
+                                    scalar: pitchScalar,
+                                },
+                            },
+                        ],
                     },
-                    pitch: {
-                        scalar: pitchScalar,
-                    },
-                } ],
+                ],
             },
         ]
     }
