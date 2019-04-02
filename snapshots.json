@@ -1,23 +1,20 @@
 {
   "initial": [
     {
-      "sections": [
+      "sounds": [
         {
-          "sounds": [
-            {
-              "duration": 1500,
-              "gain": 1,
-              "frequency": 2093,
-              "position": [
-                0,
-                0,
-                0
-              ],
-              "sustain": 1499.9
-            }
-          ]
+          "duration": 1500,
+          "gain": 1,
+          "frequency": 2093,
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "sustain": 1499.9
         }
-      ]
+      ],
+      "segnoIndex": 0
     }
   ]
 }
