@@ -1,5 +1,5 @@
 import { Id, Pattern, Patterns, StandardSpecs } from '@musical-patterns/pattern'
-import { material } from './material'
+import { finiteMaterial, material, repetendMaterial } from './material'
 import * as metadata from './metadata'
 import * as specs from './spec'
 
@@ -59,6 +59,20 @@ const playroomTestLongDuration: Pattern<specs.PlayroomTestSpecs> = {
     spec: specs.specLongDuration,
 }
 
+const playroomTestFinite: Pattern<specs.PlayroomTestSpecs> = {
+    id: Id.PLAYROOM_TEST_FINITE,
+    material: finiteMaterial,
+    metadata: metadata.playroomTestFiniteMetadata,
+    spec: specs.spec,
+}
+
+const playroomTestRepetend: Pattern<specs.PlayroomTestSpecs> = {
+    id: Id.PLAYROOM_TEST_REPETEND,
+    material: repetendMaterial,
+    metadata: metadata.playroomTestRepetendMetadata,
+    spec: specs.spec,
+}
+
 const patterns: Partial<Patterns> = {
     [ playroomTestSpecControls.id ]: playroomTestSpecControls,
     [ playroomTestPost.id ]: playroomTestPost,
@@ -68,6 +82,8 @@ const patterns: Partial<Patterns> = {
     [ playroomTestValidation.id ]: playroomTestValidation,
     [ playroomTestPresets.id ]: playroomTestPresets,
     [ playroomTestLongDuration.id ]: playroomTestLongDuration,
+    [ playroomTestFinite.id ]: playroomTestFinite,
+    [ playroomTestRepetend.id ]: playroomTestRepetend,
 }
 
 const pattern: Pattern<specs.PlayroomTestSpecs> = playroomTestSpecControls

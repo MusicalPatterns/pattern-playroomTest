@@ -1,1 +1,1 @@
-export { material } from './materials'
+export { material, repetendMaterial, finiteMaterial } from './materials'

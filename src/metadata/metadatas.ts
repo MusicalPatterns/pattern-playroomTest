@@ -65,6 +65,20 @@ const playroomTestLongDurationMetadata: Metadata = {
     originalPublish: '2019-03-03T11:00:00.000Z',
 }
 
+const playroomTestFiniteMetadata: Metadata = {
+    ...baseMetadata,
+    musicalIdeaIllustrated: 'does not repeat forever',
+    order: 9,
+    originalPublish: '2019-04-02T11:00:00.000Z',
+}
+
+const playroomTestRepetendMetadata: Metadata = {
+    ...baseMetadata,
+    musicalIdeaIllustrated: 'repeats forever but not from the beginning',
+    order: 10,
+    originalPublish: '2019-04-02T11:00:00.000Z',
+}
+
 export {
     playroomTestSpecControlsMetadata,
     playroomTestPostMetadata,
@@ -74,4 +88,6 @@ export {
     playroomTestValidationMetadata,
     playroomTestPresetsMetadata,
     playroomTestLongDurationMetadata,
+    playroomTestFiniteMetadata,
+    playroomTestRepetendMetadata,
 }
