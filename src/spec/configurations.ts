@@ -5,6 +5,10 @@ import { PlayroomTestConfigurations, PlayroomTestSpec } from './types'
 const configurations: PlayroomTestConfigurations = {
     ...standardConfigurations,
     [ PlayroomTestSpec.ARRAYED_SPEC ]: {
+        arrayedConstraint: {
+            maxLength: 7,
+            minLength: 4,
+        },
         constraint: rangedConstraints[ PlayroomTestSpec.ARRAYED_SPEC ],
         formattedName: 'example arrayed spec',
         hideInput: RangedInputType.RANGE,
