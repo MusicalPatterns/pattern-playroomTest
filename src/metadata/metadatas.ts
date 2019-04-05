@@ -1,3 +1,5 @@
+// tslint:disable max-file-line-count
+
 import { Metadata } from '@musical-patterns/pattern'
 import { nonPost, post } from './posts'
 
@@ -79,6 +81,13 @@ const playroomTestRepetendMetadata: Metadata = {
     originalPublish: '2019-04-02T11:00:00.000Z',
 }
 
+const playroomTestRestartMetadata: Metadata = {
+    ...baseMetadata,
+    musicalIdeaIllustrated: 'restarts upon spec modification',
+    order: 11,
+    originalPublish: '2019-04-04T11:00:00.000Z',
+}
+
 export {
     playroomTestSpecControlsMetadata,
     playroomTestPostMetadata,
@@ -90,4 +99,5 @@ export {
     playroomTestLongDurationMetadata,
     playroomTestFiniteMetadata,
     playroomTestRepetendMetadata,
+    playroomTestRestartMetadata,
 }

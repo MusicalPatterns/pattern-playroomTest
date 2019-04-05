@@ -6,6 +6,7 @@ export {
     specValidation,
     specPresets,
     specLongDuration,
+    specRestart,
 } from './specs'
 export {
     PlayroomTestSpecs,

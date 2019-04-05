@@ -49,6 +49,13 @@ const specLongDuration: Spec<PlayroomTestSpecs> = {
     presets,
 }
 
+const specRestart: Spec<PlayroomTestSpecs> = {
+    configurations,
+    initialSpecs: longDurationInitial,
+    presets,
+    restartOnModify: true,
+}
+
 export {
     spec,
     specDifferent,
@@ -57,4 +64,5 @@ export {
     specValidation,
     specPresets,
     specLongDuration,
+    specRestart,
 }

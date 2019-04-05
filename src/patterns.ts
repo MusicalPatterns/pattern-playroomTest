@@ -1,3 +1,5 @@
+// tslint:disable max-file-line-count
+
 import { Id, Pattern, Patterns, StandardSpecs } from '@musical-patterns/pattern'
 import { finiteMaterial, material, repetendMaterial } from './material'
 import * as metadata from './metadata'
@@ -73,6 +75,13 @@ const playroomTestRepetend: Pattern<specs.PlayroomTestSpecs> = {
     spec: specs.spec,
 }
 
+const playroomTestRestart: Pattern<specs.PlayroomTestSpecs> = {
+    id: Id.PLAYROOM_TEST_RESTART,
+    material,
+    metadata: metadata.playroomTestRestartMetadata,
+    spec: specs.specRestart,
+}
+
 const patterns: Partial<Patterns> = {
     [ playroomTestSpecControls.id ]: playroomTestSpecControls,
     [ playroomTestPost.id ]: playroomTestPost,
@@ -84,6 +93,7 @@ const patterns: Partial<Patterns> = {
     [ playroomTestLongDuration.id ]: playroomTestLongDuration,
     [ playroomTestFinite.id ]: playroomTestFinite,
     [ playroomTestRepetend.id ]: playroomTestRepetend,
+    [ playroomTestRestart.id ]: playroomTestRestart,
 }
 
 const pattern: Pattern<specs.PlayroomTestSpecs> = playroomTestSpecControls

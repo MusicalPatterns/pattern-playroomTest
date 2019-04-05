@@ -9,6 +9,7 @@ export {
     playroomTestLongDurationMetadata,
     playroomTestFiniteMetadata,
     playroomTestRepetendMetadata,
+    playroomTestRestartMetadata,
 } from './metadatas'
 export {
     nonPost,
