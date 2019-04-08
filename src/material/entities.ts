@@ -1,4 +1,4 @@
-import { Entity, MaterializeEntities } from '@musical-patterns/compiler'
+import { Entity, MaterializeEntities } from '@musical-patterns/material'
 import { StandardSpec } from '@musical-patterns/pattern'
 import { apply, from, ONE_HALF, Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from '../spec'
