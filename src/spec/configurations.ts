@@ -1,4 +1,4 @@
-import { InputType, RangedInputType, standardConfigurations, StandardSpec } from '@musical-patterns/pattern'
+import { InputType, RangedInputType, standardConfigurations, StandardSpec } from '@musical-patterns/spec'
 import { optionedConstraints, rangedConstraints, stringedConstraints } from './constraints'
 import { PlayroomTestConfigurations, PlayroomTestSpec } from './types'
 

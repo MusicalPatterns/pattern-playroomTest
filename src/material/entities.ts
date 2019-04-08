@@ -1,5 +1,5 @@
 import { Entity, MaterializeEntities } from '@musical-patterns/material'
-import { StandardSpec } from '@musical-patterns/pattern'
+import { StandardSpec } from '@musical-patterns/spec'
 import { apply, from, ONE_HALF, Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from '../spec'
 import { PLAYROOM_TEST_SCALAR } from './constants'

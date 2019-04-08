@@ -1,6 +1,8 @@
 // tslint:disable max-file-line-count
 
-import { Id, Pattern, Patterns, StandardSpecs } from '@musical-patterns/pattern'
+import { Id } from '@musical-patterns/id'
+import { Pattern, Patterns } from '@musical-patterns/pattern'
+import { StandardSpecs } from '@musical-patterns/spec'
 import { finiteMaterial, material, repetendMaterial } from './material'
 import * as metadata from './metadata'
 import * as specs from './spec'

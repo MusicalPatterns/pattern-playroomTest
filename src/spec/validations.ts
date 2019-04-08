@@ -1,4 +1,4 @@
-import { ComputeValidations, StandardSpec, Validations } from '@musical-patterns/pattern'
+import { ComputeValidations, StandardSpec, Validations } from '@musical-patterns/spec'
 import { from, Hz, isEven, Ms, Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from './types'
 

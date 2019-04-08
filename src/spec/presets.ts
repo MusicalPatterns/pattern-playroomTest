@@ -1,4 +1,4 @@
-import { Preset } from '@musical-patterns/pattern'
+import { Preset } from '@musical-patterns/spec'
 import { ObjectOf } from '@musical-patterns/utilities'
 import {
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,

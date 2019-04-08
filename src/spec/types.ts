@@ -6,7 +6,7 @@ import {
     StandardSpecs,
     StringedConfiguration,
     ToggledConfiguration,
-} from '@musical-patterns/pattern'
+} from '@musical-patterns/spec'
 
 enum OptionedSpecOneOption {
     OPTION_ONE = 'OPTION_ONE',

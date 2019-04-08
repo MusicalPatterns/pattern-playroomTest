@@ -1,4 +1,4 @@
-import { OptionedConstraint, RangedConstraint, StandardSpec, StringedConstraint } from '@musical-patterns/pattern'
+import { OptionedConstraint, RangedConstraint, StandardSpec, StringedConstraint } from '@musical-patterns/spec'
 import { from, ObjectOf } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_BASE_DURATION, PLAYROOM_TEST_MIN_BASE_DURATION } from '../constants'
 import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec } from './types'

@@ -1,6 +1,6 @@
 // tslint:disable max-file-line-count
 
-import { Metadata } from '@musical-patterns/pattern'
+import { Metadata } from '@musical-patterns/metadata'
 import { nonPost, post } from './posts'
 
 const baseMetadata: Metadata = {
