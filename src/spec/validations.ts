@@ -9,7 +9,7 @@ const computeValidations: ComputeValidations<PlayroomTestSpecs> =
 
         const arrayedSpec: number[] = specs.arrayedSpec
 
-        if (from.Hz(pitch) < from.Ms(duration)) {
+        if (from.Hz(from.Scalar<Hz, Scalar<Hz>>(pitch)) < from.Ms(from.Scalar<Ms, Scalar<Ms>>(duration))) {
             return {
                 [ StandardSpec.BASE_FREQUENCY ]: 'pitch must be more than duration, obvs',
                 [ StandardSpec.BASE_DURATION ]: 'duration must be less than pitch, obvs',

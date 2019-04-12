@@ -1,19 +1,19 @@
 import { Entity, MaterializeEntities } from '@musical-patterns/material'
 import { StandardSpec } from '@musical-patterns/spec'
-import { apply, from, ONE_HALF, Scalar, to } from '@musical-patterns/utilities'
+import { apply, from, Scalar, to } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from '../spec'
-import { PLAYROOM_TEST_SCALAR } from './constants'
+import { PLAYROOM_TEST_BASE_DURATION_SCALAR, PLAYROOM_TEST_BASE_FREQUENCY_SCALAR } from './constants'
 
 const materializeEntities: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
         const durationScalar: Scalar = from.Ms(apply.Scalar(
             specs[ StandardSpec.BASE_DURATION ] || to.Ms(to.Scalar(1)),
-            PLAYROOM_TEST_SCALAR,
+            PLAYROOM_TEST_BASE_DURATION_SCALAR,
         ))
 
         const pitchScalar: Scalar = from.Hz(apply.Scalar(
             specs[ StandardSpec.BASE_FREQUENCY ] || to.Hz(to.Scalar(1)),
-            ONE_HALF,
+            PLAYROOM_TEST_BASE_FREQUENCY_SCALAR,
         ))
 
         return [ {
@@ -30,12 +30,12 @@ const materializeFiniteEntities: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
         const durationScalar: Scalar = from.Ms(apply.Scalar(
             specs[ StandardSpec.BASE_DURATION ] || to.Ms(to.Scalar(1)),
-            PLAYROOM_TEST_SCALAR,
+            PLAYROOM_TEST_BASE_DURATION_SCALAR,
         ))
 
         const pitchScalar: Scalar = from.Hz(apply.Scalar(
             specs[ StandardSpec.BASE_FREQUENCY ] || to.Hz(to.Scalar(1)),
-            ONE_HALF,
+            PLAYROOM_TEST_BASE_FREQUENCY_SCALAR,
         ))
 
         return [ {
@@ -53,12 +53,12 @@ const materializeRepetendEntities: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
         const durationScalar: Scalar = from.Ms(apply.Scalar(
             specs[ StandardSpec.BASE_DURATION ] || to.Ms(to.Scalar(1)),
-            PLAYROOM_TEST_SCALAR,
+            PLAYROOM_TEST_BASE_DURATION_SCALAR,
         ))
 
         const pitchScalar: Scalar = from.Hz(apply.Scalar(
             specs[ StandardSpec.BASE_FREQUENCY ] || to.Hz(to.Scalar(1)),
-            ONE_HALF,
+            PLAYROOM_TEST_BASE_FREQUENCY_SCALAR,
         ))
 
         return [ {
