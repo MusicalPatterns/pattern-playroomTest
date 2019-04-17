@@ -3,7 +3,7 @@
 import {
     Hz,
     Ms,
-    ofUnits,
+    ofFrom,
     round,
     Scalar,
     SCIENTIFIC_PITCHES,
@@ -14,7 +14,7 @@ import {
 } from '@musical-patterns/utilities'
 
 const PLAYROOM_TEST_INITIAL_BASE_DURATION: Scalar<Ms> = to.Scalar<Ms>(100)
-const PLAYROOM_TEST_INITIAL_BASE_FREQUENCY: Scalar<Hz> = to.Scalar(ofUnits<'Hz'>(round(
+const PLAYROOM_TEST_INITIAL_BASE_FREQUENCY: Scalar<Hz> = to.Scalar(ofFrom(round(
     SCIENTIFIC_PITCHES[ ScientificPitchNoteName.C ][ ScientificPitchOctaveNumber._8 ],
 )))
 const PLAYROOM_TEST_INITIAL_ARRAYED_SPEC: number[] = [ 0, 1, 1, 2, 3 ]
