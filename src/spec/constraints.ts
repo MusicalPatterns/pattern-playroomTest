@@ -11,8 +11,8 @@ const rangedConstraints: ObjectOf<RangedConstraint> = {
         excludeMax: true,
         excludeMin: true,
         integer: true,
-        max: from.Ms(from.Scalar<Ms, Scalar<Ms>>(PLAYROOM_TEST_MAX_BASE_DURATION)),
-        min: from.Ms(from.Scalar<Ms, Scalar<Ms>>(PLAYROOM_TEST_MIN_BASE_DURATION)),
+        max: from.Scalar<Ms>(PLAYROOM_TEST_MAX_BASE_DURATION),
+        min: from.Scalar<Ms>(PLAYROOM_TEST_MIN_BASE_DURATION),
     },
 }
 
