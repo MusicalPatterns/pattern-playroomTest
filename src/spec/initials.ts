@@ -1,5 +1,5 @@
 import { StandardSpec, StandardSpecs } from '@musical-patterns/spec'
-import { Hz, insteadOf, Ms, Scalar, Translation, use } from '@musical-patterns/utilities'
+import { Cardinal, Hz, insteadOf, Ms, Scalar, use } from '@musical-patterns/utilities'
 import {
     DIFFERENT,
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
@@ -39,9 +39,9 @@ const differentInitial: PlayroomTestSpecs = {
     [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABF',
     [ PlayroomTestSpec.TOGGLED_SPEC ]: false,
     [ StandardSpec.BASE_DURATION ]:
-        use.Translation(PLAYROOM_TEST_INITIAL_BASE_DURATION, insteadOf<Translation, Scalar<Ms>>(DIFFERENT)),
+        use.Cardinal(PLAYROOM_TEST_INITIAL_BASE_DURATION, insteadOf<Cardinal, Scalar<Ms>>(DIFFERENT)),
     [ StandardSpec.BASE_FREQUENCY ]:
-        use.Translation(PLAYROOM_TEST_INITIAL_BASE_FREQUENCY, insteadOf<Translation, Scalar<Hz>>(DIFFERENT)),
+        use.Cardinal(PLAYROOM_TEST_INITIAL_BASE_FREQUENCY, insteadOf<Cardinal, Scalar<Hz>>(DIFFERENT)),
 }
 
 const longDurationInitial: PlayroomTestSpecs = {
