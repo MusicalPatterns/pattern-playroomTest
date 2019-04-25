@@ -1,20 +1,20 @@
 import { Entity, MaterializeEntities } from '@musical-patterns/material'
 import { StandardSpec } from '@musical-patterns/spec'
-import { as, Hz, insteadOf, Ms, Scalar, use } from '@musical-patterns/utilities'
+import { as, Duration, Hz, insteadOf, Ms, ofNotAs, Pitch, Point, Scalar, use } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from '../spec'
-import { PLAYROOM_TEST_BASE_DURATION_SCALAR, PLAYROOM_TEST_BASE_FREQUENCY_SCALAR } from './constants'
+import { PLAYROOM_TEST_BASIS_DURATION_SCALAR, PLAYROOM_TEST_BASIS_FREQUENCY_SCALAR } from './constants'
 
-const materializeEntities: MaterializeEntities =
+const materializeEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
-        const durationScalar: Scalar<Scalar> = insteadOf<Scalar, Scalar>(use.Scalar(
-            specs[ StandardSpec.BASE_DURATION ] || as.Scalar<Ms>(1),
-            PLAYROOM_TEST_BASE_DURATION_SCALAR,
-        ))
+        const durationScalar: Scalar<Duration> = as.Scalar(ofNotAs(use.Scalar(
+            specs[ StandardSpec.BASIS_DURATION ] || as.Translation<Point<Ms>>(1),
+            PLAYROOM_TEST_BASIS_DURATION_SCALAR,
+        )))
 
-        const pitchScalar: Scalar<Scalar> = insteadOf<Scalar, Scalar>(use.Scalar(
-            specs[ StandardSpec.BASE_FREQUENCY ] || as.Scalar<Hz>(1),
-            PLAYROOM_TEST_BASE_FREQUENCY_SCALAR,
-        ))
+        const pitchScalar: Scalar<Pitch> = as.Scalar(ofNotAs(use.Scalar(
+            specs[ StandardSpec.BASIS_FREQUENCY ] || as.Point<Hz>(1),
+            PLAYROOM_TEST_BASIS_FREQUENCY_SCALAR,
+        )))
 
         return [ {
             sections: [ {
@@ -26,17 +26,17 @@ const materializeEntities: MaterializeEntities =
         } ]
     }
 
-const materializeFiniteEntities: MaterializeEntities =
+const materializeFiniteEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
-        const durationScalar: Scalar<Scalar> = insteadOf<Scalar, Scalar>(use.Scalar(
-            specs[ StandardSpec.BASE_DURATION ] || as.Scalar<Ms>(1),
-            PLAYROOM_TEST_BASE_DURATION_SCALAR,
-        ))
+        const durationScalar: Scalar<Duration> = as.Scalar(ofNotAs(use.Scalar(
+            specs[ StandardSpec.BASIS_DURATION ] || as.Translation<Point<Ms>>(1),
+            PLAYROOM_TEST_BASIS_DURATION_SCALAR,
+        )))
 
-        const pitchScalar: Scalar<Scalar> = insteadOf<Scalar, Scalar>(use.Scalar(
-            specs[ StandardSpec.BASE_FREQUENCY ] || as.Scalar<Hz>(1),
-            PLAYROOM_TEST_BASE_FREQUENCY_SCALAR,
-        ))
+        const pitchScalar: Scalar<Pitch> = as.Scalar(ofNotAs(use.Scalar(
+            specs[ StandardSpec.BASIS_FREQUENCY ] || as.Point<Hz>(1),
+            PLAYROOM_TEST_BASIS_FREQUENCY_SCALAR,
+        )))
 
         return [ {
             sections: [ {
@@ -49,17 +49,17 @@ const materializeFiniteEntities: MaterializeEntities =
         } ]
     }
 
-const materializeRepetendEntities: MaterializeEntities =
+const materializeRepetendEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
-        const durationScalar: Scalar<Scalar> = insteadOf<Scalar, Scalar>(use.Scalar(
-            specs[ StandardSpec.BASE_DURATION ] || as.Scalar<Ms>(1),
-            PLAYROOM_TEST_BASE_DURATION_SCALAR,
-        ))
+        const durationScalar: Scalar<Duration> = as.Scalar(ofNotAs(use.Scalar(
+            specs[ StandardSpec.BASIS_DURATION ] || as.Translation<Point<Ms>>(1),
+            PLAYROOM_TEST_BASIS_DURATION_SCALAR,
+        )))
 
-        const pitchScalar: Scalar<Scalar> = insteadOf<Scalar, Scalar>(use.Scalar(
-            specs[ StandardSpec.BASE_FREQUENCY ] || as.Scalar<Hz>(1),
-            PLAYROOM_TEST_BASE_FREQUENCY_SCALAR,
-        ))
+        const pitchScalar: Scalar<Pitch> = as.Scalar(ofNotAs(use.Scalar(
+            specs[ StandardSpec.BASIS_FREQUENCY ] || as.Point<Hz>(1),
+            PLAYROOM_TEST_BASIS_FREQUENCY_SCALAR,
+        )))
 
         return [ {
             sections: [
@@ -81,7 +81,7 @@ const materializeRepetendEntities: MaterializeEntities =
     }
 
 export {
-    materializeEntities,
-    materializeFiniteEntities,
-    materializeRepetendEntities,
+    materializeEntitiesUsingCrazyStrategyCircumventingScales,
+    materializeFiniteEntitiesUsingCrazyStrategyCircumventingScales,
+    materializeRepetendEntitiesUsingCrazyStrategyCircumventingScales,
 }

@@ -1,12 +1,12 @@
 import { StandardSpec, StandardSpecs } from '@musical-patterns/spec'
-import { Cardinal, Hz, insteadOf, Ms, Scalar, use } from '@musical-patterns/utilities'
+import { Cardinal, Duration, Hz, insteadOf, Ms, Pitch, Scalar, Translation, use } from '@musical-patterns/utilities'
 import {
     DIFFERENT,
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
-    PLAYROOM_TEST_INITIAL_BASE_DURATION,
-    PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
-    PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
+    PLAYROOM_TEST_INITIAL_BASIS_DURATION,
+    PLAYROOM_TEST_INITIAL_BASIS_FREQUENCY,
+    PLAYROOM_TEST_LONG_DURATION_INITIAL_BASIS_DURATION,
 } from './constants'
 import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec, PlayroomTestSpecs } from './types'
 
@@ -21,8 +21,8 @@ const onlyPatternParticularInitial: PlayroomTestSpecs = {
 }
 
 const onlyStandardInitial: StandardSpecs = {
-    [ StandardSpec.BASE_DURATION ]: PLAYROOM_TEST_INITIAL_BASE_DURATION,
-    [ StandardSpec.BASE_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASE_FREQUENCY,
+    [ StandardSpec.BASIS_DURATION ]: PLAYROOM_TEST_INITIAL_BASIS_DURATION,
+    [ StandardSpec.BASIS_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASIS_FREQUENCY,
 }
 
 const initials: PlayroomTestSpecs = {
@@ -38,15 +38,15 @@ const differentInitial: PlayroomTestSpecs = {
     [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
     [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABF',
     [ PlayroomTestSpec.TOGGLED_SPEC ]: false,
-    [ StandardSpec.BASE_DURATION ]:
-        use.Cardinal(PLAYROOM_TEST_INITIAL_BASE_DURATION, insteadOf<Cardinal, Scalar<Ms>>(DIFFERENT)),
-    [ StandardSpec.BASE_FREQUENCY ]:
-        use.Cardinal(PLAYROOM_TEST_INITIAL_BASE_FREQUENCY, insteadOf<Cardinal, Scalar<Hz>>(DIFFERENT)),
+    [ StandardSpec.BASIS_DURATION ]:
+        use.Translation(PLAYROOM_TEST_INITIAL_BASIS_DURATION, insteadOf<Translation, Duration>(DIFFERENT)),
+    [ StandardSpec.BASIS_FREQUENCY ]:
+        use.Translation(PLAYROOM_TEST_INITIAL_BASIS_FREQUENCY, insteadOf<Translation, Pitch>(DIFFERENT)),
 }
 
 const longDurationInitial: PlayroomTestSpecs = {
     ...initials,
-    [ StandardSpec.BASE_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASE_DURATION,
+    [ StandardSpec.BASIS_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASIS_DURATION,
 }
 
 export {

@@ -29,8 +29,8 @@ enum PlayroomTestSpec {
 }
 
 interface PlayroomTestConfigurations extends Configurations<PlayroomTestSpecs> {
-    [ StandardSpec.BASE_DURATION ]: RangedConfiguration,
-    [ StandardSpec.BASE_FREQUENCY ]: RangedConfiguration,
+    [ StandardSpec.BASIS_DURATION ]: RangedConfiguration,
+    [ StandardSpec.BASIS_FREQUENCY ]: RangedConfiguration,
     [ PlayroomTestSpec.ARRAYED_SPEC ]: RangedConfiguration,
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: RangedConfiguration,
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedConfiguration,
