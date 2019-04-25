@@ -7,7 +7,7 @@ import { PLAYROOM_TEST_BASIS_DURATION_SCALAR, PLAYROOM_TEST_BASIS_FREQUENCY_SCAL
 const materializeEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
         const durationScalar: Scalar<Duration> = as.Scalar(ofNotAs(use.Scalar(
-            specs[ StandardSpec.BASIS_DURATION ] || as.Translation<Point<Ms>>(1),
+            specs[ StandardSpec.BASIS_DURATION ] || as.Delta<Ms>(1),
             PLAYROOM_TEST_BASIS_DURATION_SCALAR,
         )))
 
@@ -29,7 +29,7 @@ const materializeEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntit
 const materializeFiniteEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
         const durationScalar: Scalar<Duration> = as.Scalar(ofNotAs(use.Scalar(
-            specs[ StandardSpec.BASIS_DURATION ] || as.Translation<Point<Ms>>(1),
+            specs[ StandardSpec.BASIS_DURATION ] || as.Delta<Ms>(1),
             PLAYROOM_TEST_BASIS_DURATION_SCALAR,
         )))
 
@@ -52,7 +52,7 @@ const materializeFiniteEntitiesUsingCrazyStrategyCircumventingScales: Materializ
 const materializeRepetendEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntities =
     (specs: PlayroomTestSpecs): Entity[] => {
         const durationScalar: Scalar<Duration> = as.Scalar(ofNotAs(use.Scalar(
-            specs[ StandardSpec.BASIS_DURATION ] || as.Translation<Point<Ms>>(1),
+            specs[ StandardSpec.BASIS_DURATION ] || as.Delta<Ms>(1),
             PLAYROOM_TEST_BASIS_DURATION_SCALAR,
         )))
 
