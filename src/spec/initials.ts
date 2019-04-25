@@ -1,5 +1,5 @@
 import { StandardSpec, StandardSpecs } from '@musical-patterns/spec'
-import { Cardinal, Duration, Hz, insteadOf, Ms, Pitch, Scalar, Translation, use } from '@musical-patterns/utilities'
+import { Duration, insteadOf, Pitch, Translation, use } from '@musical-patterns/utilities'
 import {
     DIFFERENT,
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,

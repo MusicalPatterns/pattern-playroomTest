@@ -1,6 +1,6 @@
 import { Entity, MaterializeEntities } from '@musical-patterns/material'
 import { StandardSpec } from '@musical-patterns/spec'
-import { as, Duration, Hz, insteadOf, Ms, ofNotAs, Pitch, Point, Scalar, use } from '@musical-patterns/utilities'
+import { as, Duration, Hz, Ms, ofNotAs, Pitch, Point, Scalar, use } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from '../spec'
 import { PLAYROOM_TEST_BASIS_DURATION_SCALAR, PLAYROOM_TEST_BASIS_FREQUENCY_SCALAR } from './constants'
 
