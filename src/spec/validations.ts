@@ -1,5 +1,5 @@
 import { ComputeValidations, StandardSpec, Validations } from '@musical-patterns/spec'
-import { as, Duration, Hz, isEven, Ms, notAs, Pitch } from '@musical-patterns/utilities'
+import { as, Duration, Hz, isEven, Ms,  Pitch } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from './types'
 
 const computeValidations: ComputeValidations<PlayroomTestSpecs> =
@@ -9,7 +9,7 @@ const computeValidations: ComputeValidations<PlayroomTestSpecs> =
 
         const arrayedSpec: number[] = specs.arrayedSpec
 
-        if (notAs.Point<Hz>(pitch) < notAs.Delta<Ms>(duration)) {
+        if (as.number(pitch) < as.number(duration)) {
             return {
                 [ StandardSpec.BASIS_FREQUENCY ]: 'pitch must be more than duration, obvs',
                 [ StandardSpec.BASIS_DURATION ]: 'duration must be less than pitch, obvs',

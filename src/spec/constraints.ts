@@ -1,5 +1,5 @@
 import { OptionedConstraint, RangedConstraint, StandardSpec, StringedConstraint } from '@musical-patterns/spec'
-import { Ms, notAs, ObjectOf } from '@musical-patterns/utilities'
+import { as, ObjectOf } from '@musical-patterns/utilities'
 import { PLAYROOM_TEST_MAX_BASIS_DURATION, PLAYROOM_TEST_MIN_BASIS_DURATION } from '../constants'
 import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec } from './types'
 
@@ -11,8 +11,8 @@ const rangedConstraints: ObjectOf<RangedConstraint> = {
         excludeMax: true,
         excludeMin: true,
         integer: true,
-        max: notAs.Delta<Ms>(PLAYROOM_TEST_MAX_BASIS_DURATION),
-        min: notAs.Delta<Ms>(PLAYROOM_TEST_MIN_BASIS_DURATION),
+        max: as.number(PLAYROOM_TEST_MAX_BASIS_DURATION),
+        min: as.number(PLAYROOM_TEST_MIN_BASIS_DURATION),
     },
 }
 
