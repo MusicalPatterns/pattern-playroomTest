@@ -1,4 +1,4 @@
-import { Material, Scale } from '@musical-patterns/material'
+import { Material, materializeStandardScales } from '@musical-patterns/material'
 import {
     materializeEntitiesUsingCrazyStrategyCircumventingScales,
     materializeFiniteEntitiesUsingCrazyStrategyCircumventingScales,
@@ -7,17 +7,17 @@ import {
 
 const material: Material = {
     materializeEntities: materializeEntitiesUsingCrazyStrategyCircumventingScales,
-    materializeScales: (): Scale[] => [],
+    materializeScales: materializeStandardScales,
 }
 
 const finiteMaterial: Material = {
     materializeEntities: materializeFiniteEntitiesUsingCrazyStrategyCircumventingScales,
-    materializeScales: (): Scale[] => [],
+    materializeScales: materializeStandardScales,
 }
 
 const repetendMaterial: Material = {
     materializeEntities: materializeRepetendEntitiesUsingCrazyStrategyCircumventingScales,
-    materializeScales: (): Scale[] => [],
+    materializeScales: materializeStandardScales,
 }
 
 export {
