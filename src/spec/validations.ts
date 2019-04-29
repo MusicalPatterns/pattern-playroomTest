@@ -1,11 +1,11 @@
 import { ComputeValidations, StandardSpec, Validations } from '@musical-patterns/spec'
-import { as, Duration, Hz, isEven, Ms,  Pitch } from '@musical-patterns/utilities'
+import { as, Duration, isEven, musicalAs, Pitch } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from './types'
 
 const computeValidations: ComputeValidations<PlayroomTestSpecs> =
     (specs: PlayroomTestSpecs): Validations<PlayroomTestSpecs> => {
-        const pitch: Pitch = specs[ StandardSpec.BASIS_FREQUENCY ] || as.Point<Hz>(1)
-        const duration: Duration = specs[ StandardSpec.BASIS_DURATION ] || as.Delta<Ms>(1)
+        const pitch: Pitch = specs[ StandardSpec.BASIS_FREQUENCY ] || musicalAs.Pitch(1)
+        const duration: Duration = specs[ StandardSpec.BASIS_DURATION ] || musicalAs.Duration(1)
 
         const arrayedSpec: number[] = specs.arrayedSpec
 
