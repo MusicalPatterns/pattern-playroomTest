@@ -1,12 +1,12 @@
 import { StandardSpec, StandardSpecs } from '@musical-patterns/spec'
-import { Duration, insteadOf, Pitch, Translation, use } from '@musical-patterns/utilities'
+import { Duration, insteadOf, Tone, Translation, use } from '@musical-patterns/utilities'
 import {
     DIFFERENT,
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC,
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
-    PLAYROOM_TEST_INITIAL_BASIS_DURATION,
-    PLAYROOM_TEST_INITIAL_BASIS_FREQUENCY,
-    PLAYROOM_TEST_LONG_DURATION_INITIAL_BASIS_DURATION,
+    PLAYROOM_TEST_INITIAL_HZ_PHYSICALIZATION,
+    PLAYROOM_TEST_INITIAL_MS_PHYSICALIZATION,
+    PLAYROOM_TEST_LONG_DURATION_INITIAL_MS_PHYSICALIZATION,
 } from './constants'
 import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec, PlayroomTestSpecs } from './types'
 
@@ -21,8 +21,8 @@ const onlyPatternParticularInitial: PlayroomTestSpecs = {
 }
 
 const onlyStandardInitial: StandardSpecs = {
-    [ StandardSpec.BASIS_DURATION ]: PLAYROOM_TEST_INITIAL_BASIS_DURATION,
-    [ StandardSpec.BASIS_FREQUENCY ]: PLAYROOM_TEST_INITIAL_BASIS_FREQUENCY,
+    [ StandardSpec.MS_PHYSICALIZATION ]: PLAYROOM_TEST_INITIAL_MS_PHYSICALIZATION,
+    [ StandardSpec.HZ_PHYSICALIZATION ]: PLAYROOM_TEST_INITIAL_HZ_PHYSICALIZATION,
 }
 
 const initials: PlayroomTestSpecs = {
@@ -38,15 +38,15 @@ const differentInitial: PlayroomTestSpecs = {
     [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
     [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABF',
     [ PlayroomTestSpec.TOGGLED_SPEC ]: false,
-    [ StandardSpec.BASIS_DURATION ]:
-        use.Translation(PLAYROOM_TEST_INITIAL_BASIS_DURATION, insteadOf<Translation, Duration>(DIFFERENT)),
-    [ StandardSpec.BASIS_FREQUENCY ]:
-        use.Translation(PLAYROOM_TEST_INITIAL_BASIS_FREQUENCY, insteadOf<Translation, Pitch>(DIFFERENT)),
+    [ StandardSpec.MS_PHYSICALIZATION ]:
+        use.Translation(PLAYROOM_TEST_INITIAL_MS_PHYSICALIZATION, insteadOf<Translation, Duration>(DIFFERENT)),
+    [ StandardSpec.HZ_PHYSICALIZATION ]:
+        use.Translation(PLAYROOM_TEST_INITIAL_HZ_PHYSICALIZATION, insteadOf<Translation, Tone>(DIFFERENT)),
 }
 
 const longDurationInitial: PlayroomTestSpecs = {
     ...initials,
-    [ StandardSpec.BASIS_DURATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_BASIS_DURATION,
+    [ StandardSpec.MS_PHYSICALIZATION ]: PLAYROOM_TEST_LONG_DURATION_INITIAL_MS_PHYSICALIZATION,
 }
 
 export {

@@ -43,14 +43,14 @@ const configurations: PlayroomTestConfigurations = {
         inputType: InputType.TOGGLED,
         order: 1,
     },
-    [ StandardSpec.BASIS_DURATION ]: {
-        ...standardConfigurations[ StandardSpec.BASIS_DURATION ],
-        constraint: rangedConstraints[ StandardSpec.BASIS_DURATION ],
+    [ StandardSpec.MS_PHYSICALIZATION ]: {
+        ...standardConfigurations[ StandardSpec.MS_PHYSICALIZATION ],
+        constraint: rangedConstraints[ StandardSpec.MS_PHYSICALIZATION ],
         formattedName: 'example ranged control one',
         order: 2,
     },
-    [ StandardSpec.BASIS_FREQUENCY ]: {
-        ...standardConfigurations[ StandardSpec.BASIS_FREQUENCY ],
+    [ StandardSpec.HZ_PHYSICALIZATION ]: {
+        ...standardConfigurations[ StandardSpec.HZ_PHYSICALIZATION ],
         description: 'I need to describe something to you and it is super cereal you guys',
         formattedName: 'example ranged control two',
         hideInput: RangedInputType.RANGE,
@@ -61,8 +61,8 @@ const configurations: PlayroomTestConfigurations = {
 const differentConfigurations: PlayroomTestConfigurations = {
     ...standardConfigurations,
     ...configurations,
-    [ StandardSpec.BASIS_FREQUENCY ]: {
-        ...standardConfigurations[ StandardSpec.BASIS_FREQUENCY ],
+    [ StandardSpec.HZ_PHYSICALIZATION ]: {
+        ...standardConfigurations[ StandardSpec.HZ_PHYSICALIZATION ],
         hideInput: RangedInputType.NUMBER,
     },
     [ PlayroomTestSpec.ARRAYED_SPEC ]: {

@@ -1,10 +1,10 @@
-import { Note, STANDARD_DURATION_SCALE_INDEX, STANDARD_PITCH_SCALE_INDEX } from '@musical-patterns/material'
-import { PLAYROOM_TEST_NOTE_DURATION_SCALAR, PLAYROOM_TEST_NOTE_PITCH_SCALAR } from './constants'
+import { Note, STANDARD_PITCH_SCALE_INDEX, STANDARD_VALUE_SCALE_INDEX } from '@musical-patterns/material'
+import { PLAYROOM_TEST_NOTE_PITCH_SCALAR, PLAYROOM_TEST_NOTE_VALUE_SCALAR } from './constants'
 
 const computeNotes: () => Note[] =
     (): Note[] => [ {
-        duration: { scalar: PLAYROOM_TEST_NOTE_DURATION_SCALAR, scaleIndex: STANDARD_DURATION_SCALE_INDEX },
         pitch: { scalar: PLAYROOM_TEST_NOTE_PITCH_SCALAR, scaleIndex: STANDARD_PITCH_SCALE_INDEX },
+        value: { scalar: PLAYROOM_TEST_NOTE_VALUE_SCALAR, scaleIndex: STANDARD_VALUE_SCALE_INDEX },
     } ]
 
 export {
