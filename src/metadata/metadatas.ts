@@ -62,7 +62,7 @@ const playroomTestPresetsMetadata: Metadata = {
 
 const playroomTestLongDurationMetadata: Metadata = {
     ...baseMetadata,
-    musicalIdeaIllustrated: 'long duration',
+    musicalIdeaIllustrated: 'long value',
     order: 8,
     originalPublish: '2019-03-03T11:00:00.000Z',
 }
