@@ -1,5 +1,5 @@
 import { ComputeValidations, StandardSpec, Validations } from '@musical-patterns/spec'
-import { as, Duration, isEven, musicalAs, Tone } from '@musical-patterns/utilities'
+import { as, computeLength, Duration, isEven, musicalAs, Tone } from '@musical-patterns/utilities'
 import { PlayroomTestSpecs } from './types'
 
 const computeValidations: ComputeValidations<PlayroomTestSpecs> =
@@ -16,7 +16,7 @@ const computeValidations: ComputeValidations<PlayroomTestSpecs> =
             }
         }
 
-        if (isEven(arrayedSpec.length)) {
+        if (isEven(computeLength(arrayedSpec))) {
             return {
                 arrayedSpec: arrayedSpec.map(() => 'arrays can only be odd in length, duoy'),
             }
