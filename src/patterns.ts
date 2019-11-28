@@ -2,7 +2,7 @@
 
 import { Id } from '@musical-patterns/id'
 import { Pattern, Patterns } from '@musical-patterns/pattern'
-import { StandardSpecs } from '@musical-patterns/spec'
+import { Specs } from '@musical-patterns/spec'
 import { finiteMaterial, material, repetendMaterial } from './material'
 import * as metadata from './metadata'
 import * as specs from './spec'
@@ -35,7 +35,7 @@ const playroomTestOnlyPatternParticularSpecs: Pattern<specs.PlayroomTestSpecs> =
     spec: specs.specOnlyPatternParticularInitial,
 }
 
-const playroomTestOnlyStandardSpecs: Pattern<StandardSpecs> = {
+const playroomTestOnlyStandardSpecs: Pattern = {
     id: Id.PLAYROOM_TEST_ONLY_STANDARD_SPECS,
     material,
     metadata: metadata.playroomTestOnlyStandardSpecsMetadata,

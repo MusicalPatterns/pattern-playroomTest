@@ -1,4 +1,4 @@
-import { StandardSpec, StandardSpecs } from '@musical-patterns/spec'
+import { Specs, StandardSpec } from '@musical-patterns/spec'
 import { Duration, insteadOf, Tone, Translation, use } from '@musical-patterns/utilities'
 import {
     DIFFERENT,
@@ -20,7 +20,7 @@ const onlyPatternParticularInitial: PlayroomTestSpecs = {
     [ PlayroomTestSpec.TOGGLED_SPEC ]: true,
 }
 
-const onlyStandardInitial: StandardSpecs = {
+const onlyStandardInitial: Specs = {
     [ StandardSpec.MS_PHYSICALIZATION ]: PLAYROOM_TEST_INITIAL_MS_PHYSICALIZATION,
     [ StandardSpec.HZ_PHYSICALIZATION ]: PLAYROOM_TEST_INITIAL_HZ_PHYSICALIZATION,
 }

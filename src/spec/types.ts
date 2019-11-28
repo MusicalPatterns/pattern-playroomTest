@@ -2,8 +2,8 @@ import {
     Configurations,
     OptionedConfiguration,
     RangedConfiguration,
+    Specs,
     StandardSpec,
-    StandardSpecs,
     StringedConfiguration,
     ToggledConfiguration,
 } from '@musical-patterns/spec'
@@ -39,7 +39,7 @@ interface PlayroomTestConfigurations extends Configurations<PlayroomTestSpecs> {
     [ PlayroomTestSpec.TOGGLED_SPEC ]: ToggledConfiguration,
 }
 
-interface PlayroomTestSpecs extends StandardSpecs {
+interface PlayroomTestSpecs extends Specs {
     [ PlayroomTestSpec.ARRAYED_SPEC ]: number[],
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: number[],
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption,
