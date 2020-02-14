@@ -17,7 +17,7 @@ const rangedConstraints: ObjectOf<RangedConstraint> = {
 }
 
 const optionedConstraints: ObjectOf<OptionedConstraint> = {
-    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: [
+    [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: { required: true } && [
         {
             formattedName: 'Option one',
             value: OptionedSpecOneOption.OPTION_ONE,
@@ -34,6 +34,10 @@ const optionedConstraints: ObjectOf<OptionedConstraint> = {
         },
     ],
     [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: [
+        {
+            formattedName: '',
+            value: undefined,
+        },
         {
             formattedName: 'Option the First',
             value: OptionedSpecTwoOption.OPTION_THE_FIRST,
