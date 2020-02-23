@@ -23,7 +23,7 @@ enum PlayroomTestSpec {
     ARRAYED_SPEC = 'arrayedSpec',
     ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE = 'arrayedSpecWithInitialFieldValue',
     OPTIONED_SPEC_ONE = 'optionedSpecOne',
-    OPTIONED_SPEC_TWO = 'optionedSpecTwo',
+    OPTIONED_SPEC_TWO_NOT_REQUIRED = 'optionedSpecTwoNotRequired',
     STRINGED_SPEC = 'stringedSpec',
     TOGGLED_SPEC = 'toggledSpec',
 }
@@ -34,7 +34,7 @@ interface PlayroomTestConfigurations extends Configurations<PlayroomTestSpecs> {
     [ PlayroomTestSpec.ARRAYED_SPEC ]: RangedConfiguration,
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: RangedConfiguration,
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedConfiguration,
-    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedConfiguration,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ]: OptionedConfiguration,
     [ PlayroomTestSpec.STRINGED_SPEC ]: StringedConfiguration,
     [ PlayroomTestSpec.TOGGLED_SPEC ]: ToggledConfiguration,
 }
@@ -43,7 +43,7 @@ interface PlayroomTestSpecs extends Specs {
     [ PlayroomTestSpec.ARRAYED_SPEC ]: number[],
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: number[],
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption,
-    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ]: OptionedSpecTwoOption,
     [ PlayroomTestSpec.STRINGED_SPEC ]: string,
     [ PlayroomTestSpec.TOGGLED_SPEC ]: boolean,
 }

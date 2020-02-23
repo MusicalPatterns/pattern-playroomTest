@@ -8,6 +8,7 @@ const configurations: PlayroomTestConfigurations = {
         arrayedConstraint: {
             maxLength: 7,
             minLength: 4,
+            required: true,
         },
         constraint: rangedConstraints[ PlayroomTestSpec.ARRAYED_SPEC ],
         formattedName: 'example arrayed spec',
@@ -16,7 +17,13 @@ const configurations: PlayroomTestConfigurations = {
         isArrayed: true,
     },
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]: {
+        arrayedConstraint: {
+            required: true,
+        },
         arrayedNewFieldInitialValue: 0,
+        constraint: {
+            required: true,
+        },
         formattedName: 'example arrayed control, with an initial value for its elements',
         hideInput: RangedInputType.NUMBER,
         inputType: InputType.RANGED,
@@ -27,8 +34,8 @@ const configurations: PlayroomTestConfigurations = {
         formattedName: 'example optioned control one',
         inputType: InputType.OPTIONED,
     },
-    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: {
-        constraint: optionedConstraints[ PlayroomTestSpec.OPTIONED_SPEC_TWO ],
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ]: {
+        constraint: optionedConstraints[ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ],
         formattedName: 'example optioned control two',
         inputType: InputType.OPTIONED,
     },
@@ -66,8 +73,12 @@ const differentConfigurations: PlayroomTestConfigurations = {
         hideInput: RangedInputType.NUMBER,
     },
     [ PlayroomTestSpec.ARRAYED_SPEC ]: {
+        arrayedConstraint: {
+            required: true,
+        },
         constraint: {
             min: 0,
+            required: true,
         },
         formattedName: 'example arrayed control hiding neither input',
         inputType: InputType.RANGED,

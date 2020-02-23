@@ -6,6 +6,7 @@ import { OptionedSpecOneOption, OptionedSpecTwoOption, PlayroomTestSpec } from '
 const rangedConstraints: ObjectOf<RangedConstraint> = {
     [ PlayroomTestSpec.ARRAYED_SPEC ]: {
         min: 0,
+        required: true,
     },
     [ StandardSpec.MS_PHYSICALIZATION ]: {
         excludeMax: true,
@@ -13,6 +14,7 @@ const rangedConstraints: ObjectOf<RangedConstraint> = {
         integer: true,
         max: as.number(PLAYROOM_TEST_MAX_MS_PHYSICALIZATION),
         min: as.number(PLAYROOM_TEST_MIN_MS_PHYSICALIZATION),
+        required: true,
     },
 }
 
@@ -33,7 +35,7 @@ const optionedConstraints: ObjectOf<OptionedConstraint> = {
             value: OptionedSpecOneOption.OPTION_THREE,
         },
     ],
-    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: [
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ]: [
         {
             formattedName: '',
             value: undefined,
@@ -53,6 +55,7 @@ const stringedConstraints: ObjectOf<StringedConstraint> = {
     [ PlayroomTestSpec.STRINGED_SPEC ]: {
         maxLength: 4,
         minLength: 3,
+        required: true,
     },
 }
 

@@ -15,7 +15,7 @@ const onlyPatternParticularInitial: PlayroomTestSpecs = {
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]:
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_TWO,
-    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_FIRST,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ]: OptionedSpecTwoOption.OPTION_THE_FIRST,
     [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABC',
     [ PlayroomTestSpec.TOGGLED_SPEC ]: true,
 }
@@ -35,7 +35,7 @@ const differentInitial: PlayroomTestSpecs = {
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]:
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_ONE,
-    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
     [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABF',
     [ PlayroomTestSpec.TOGGLED_SPEC ]: false,
     [ StandardSpec.MS_PHYSICALIZATION ]:

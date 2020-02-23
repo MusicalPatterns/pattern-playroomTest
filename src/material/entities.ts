@@ -1,13 +1,13 @@
 import { Entity, MaterializeEntities } from '@musical-patterns/material'
 import { as } from '@musical-patterns/utilities'
-import { computeNotes } from './notes'
+import { thunkNotes } from './notes'
 
 const materializeEntitiesUsingCrazyStrategyCircumventingScales: MaterializeEntities =
     (): Entity[] => [
         {
             sections: [
                 {
-                    notes: computeNotes(),
+                    notes: thunkNotes(),
                 },
             ],
         },
@@ -18,7 +18,7 @@ const materializeFiniteEntitiesUsingCrazyStrategyCircumventingScales: Materializ
         {
             sections: [
                 {
-                    notes: computeNotes(),
+                    notes: thunkNotes(),
                     repetitions: as.Cardinal(1),
                 },
             ],
@@ -30,11 +30,11 @@ const materializeRepetendEntitiesUsingCrazyStrategyCircumventingScales: Material
         {
             sections: [
                 {
-                    notes: computeNotes(),
+                    notes: thunkNotes(),
                     repetitions: as.Cardinal(1),
                 },
                 {
-                    notes: computeNotes(),
+                    notes: thunkNotes(),
                 },
             ],
         },

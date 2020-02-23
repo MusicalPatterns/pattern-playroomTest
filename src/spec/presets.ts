@@ -17,7 +17,7 @@ const otherPresetSpecs: PlayroomTestSpecs = {
     [ PlayroomTestSpec.ARRAYED_SPEC_WITH_INITIAL_FIELD_VALUE ]:
     PLAYROOM_TEST_INITIAL_ARRAYED_SPEC_WITH_INITIAL_ELEMENT_VALUE,
     [ PlayroomTestSpec.OPTIONED_SPEC_ONE ]: OptionedSpecOneOption.OPTION_TWO,
-    [ PlayroomTestSpec.OPTIONED_SPEC_TWO ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
+    [ PlayroomTestSpec.OPTIONED_SPEC_TWO_NOT_REQUIRED ]: OptionedSpecTwoOption.OPTION_THE_SECOND,
     [ PlayroomTestSpec.STRINGED_SPEC ]: 'ABD',
     [ PlayroomTestSpec.TOGGLED_SPEC ]: true,
 }

@@ -18,7 +18,7 @@ const computeValidations: ComputeValidations<PlayroomTestSpecs> =
 
         if (isEven(computeLength(arrayedSpec))) {
             return {
-                arrayedSpec: arrayedSpec.map(() => 'arrays can only be odd in length, duoy'),
+                arrayedSpec: arrayedSpec.map((): string => 'arrays can only be odd in length, duoy'),
             }
         }
 
