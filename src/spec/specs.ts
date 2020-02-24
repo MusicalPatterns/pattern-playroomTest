@@ -1,4 +1,4 @@
-import { Spec, Specs } from '@musical-patterns/spec'
+import { Spec } from '@musical-patterns/spec'
 import { configurations, differentConfigurations } from './configurations'
 import {
     differentInitial,

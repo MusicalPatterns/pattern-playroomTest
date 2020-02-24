@@ -2,7 +2,6 @@
 
 import { Id } from '@musical-patterns/id'
 import { Pattern, Patterns } from '@musical-patterns/pattern'
-import { Specs } from '@musical-patterns/spec'
 import { finiteMaterial, material, repetendMaterial } from './material'
 import * as metadata from './metadata'
 import * as specs from './spec'
